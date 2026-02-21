@@ -8,20 +8,26 @@ export const primaryNav = [
 
 export const sections = [
   {
-    title: "HUMAN INTERFACE",
-    items: ["Apple", "GoodNotes"],
+    title: "MOBILE APPS",
+    items: [
+      { label: "Musings", href: "#musings" },
+      { label: "Aegis", href: "#aegis" },
+    ],
   },
   {
-    title: "WEB INTERFACE",
+    title: "WEB APPS/WEBSITES",
     items: [
-      "Berkeleytime",
-      "Marqeta",
-      "PropertyGuru",
-      "Micro-Interactions",
+      { label: "Vaaya", href: "#vaaya" },
+      { label: "PageX", href: "#pagex" },
     ],
   },
   {
     title: "CONTACT",
-    items: ["Mail", "Instagram", "LinkedIn", "Read.cv"],
+    items: [
+      { label: "Mail", href: "#mail" },
+      { label: "Instagram", href: "#instagram" },
+      { label: "LinkedIn", href: "#linkedin" },
+      { label: "Read.cv", href: "#readcv" },
+    ],
   },
 ];

@@ -2,7 +2,7 @@ import { primaryNav, sections } from "@/data/sidebarData";
 
 export default function Sidebar() {
   return (
-    <aside className="fixed left-0 top-0 min-h-screen w-[165px] 
+    <aside className="fixed left-0 top-0 h-screen w-[165px] 
                        bg-[#F3F3F1] border-r border-[#E6E6E4] 
                        overflow-y-auto">
 
@@ -40,14 +40,15 @@ export default function Sidebar() {
             </div>
 
 <div className="space-y-[4px] text-[9.5px]">
-  {section.items.map((item) => (
-    <div
-      key={item}
-      className="text-[#3A3A3A] hover:text-[#9A9A9A] transition-colors duration-150"
-    >
-      {item}
-    </div>
-  ))}
+{section.items.map((item) => (
+  <a
+    key={item.label}
+    href={item.href}
+    className="block no-underline text-[#3A3A3A] hover:text-[#9A9A9A] transition-colors duration-150"
+  >
+    {item.label}
+  </a>
+))}
 </div>
 
             {/* Add divider between sections except last */}
