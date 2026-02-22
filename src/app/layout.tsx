@@ -19,13 +19,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <Sidebar />
 
-        <main className="ml-[165px]">
-          <div className="max-w-2xl mx-auto px-6 py-12">
+<main className="ml-[165px] w-[calc(100%-165px)]">
+          <div className="px-6 py-12">
             <RouteTransition>
               {children}
             </RouteTransition>
           </div>
         </main>
+
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import ProductCard from "@/components/ui/ProductCard";
 
 export default function Home() {
   return (
-    <div className="px-10 py-16">
+<div className="px-6 py-16">
 
       {/* Intro */}
       <p className="text-sm text-neutral-400 mb-6">
@@ -14,34 +14,61 @@ export default function Home() {
         that feel natural and useful.
       </h1>
 
-      {/* Cards Section — Apple Masonry */}
-      <div className="mt-16 columns-1 md:columns-2 xl:columns-3 gap-6">
-<ProductCard
-  title="Musings"
-  subtitle="Mobile App"
-  year="2023"
-  image="/images/musings.png"
-  href="/work/musings"
-  variant="tall"
-/>
+      {/* Three Column Editorial Layout */}
+ <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-<ProductCard
-  title="Vaaya"
-  subtitle="Web Platform"
-  year="2024"
-  image="/images/vaaya.png"
-  href="/work/vaaya"
-  variant="wide"
-/>
+        {/* COLUMN 1 */}
+        <div className="flex flex-col gap-3">
 
-<ProductCard
-  title="Pagex"
-  subtitle="Web Platform"
-  year="2024"
-  image="/images/pagex.png"
-  href="/work/pagex"
-  variant="medium"
-/>
+          <ProductCard
+            title="Musings"
+            subtitle="Mobile App"
+            year="2023-2024"
+            image="/images/musings.png"
+            href="/work/musings"
+            variant="tall"
+          />
+
+          <ProductCard
+            title="Pagex"
+            subtitle="Web Platform"
+            year="2026"
+            image="/images/pagex.png"
+            href="/work/pagex"
+            variant="medium"
+          />
+
+        </div>
+
+        {/* COLUMN 2 */}
+        <div className="flex flex-col gap-3">
+
+          <ProductCard
+            title="Vaaya"
+            subtitle="Web Platform"
+            year="2025-2026"
+            image="/images/vaaya.png"
+            href="/work/vaaya"
+            variant="wide"
+          />
+
+          {/* Future card slot */}
+
+        </div>
+
+        {/* COLUMN 3 */}
+        <div className="flex flex-col gap-3">
+
+     <ProductCard
+            title="Aegis"
+            subtitle="Web/Mobile Platform"
+            year="2025"
+            image="/images/musings.png"
+            href="/work/aegis"
+            variant="wide"
+          />
+
+        </div>
 
       </div>
     </div>
