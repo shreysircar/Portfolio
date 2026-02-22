@@ -26,12 +26,12 @@ export default function Sidebar() {
         />
 
         {/* PRIMARY NAV */}
-<nav className="space-y-[4px] text-[14px]">
+<nav className="space-y-[4px] text-[15px]">
   {primaryNav.map((item) => (
     <a
       key={item.label}
       href={item.href}
-className="block no-underline font-bold tracking-[-0.01em] text-[#1C1C1E] hover:text-[#9A9A9A] transition-colors duration-150"
+className="block no-underline font-semibold tracking-[-0.01em] text-[#2C2C2C] hover:text-[#9A9A9A] transition-colors duration-150"
     >
       {item.label}
     </a>
@@ -54,7 +54,7 @@ className="block no-underline font-bold tracking-[-0.01em] text-[#1C1C1E] hover:
   <a
     key={item.label}
     href={item.href}
-className="block no-underline font-bold tracking-[-0.01em] text-[#1C1C1E] hover:text-[#9A9A9A] transition-colors duration-150"
+className="block no-underline tracking-[-0.01em] text-[#1C1C1E] hover:text-[#9A9A9A] transition-colors duration-150"
   >
     {item.label}
   </a>
