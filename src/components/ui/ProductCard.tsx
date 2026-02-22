@@ -36,7 +36,7 @@ export default function ProductCard({
   relative
   w-full
   ${aspectClass}
-  bg-white
+  bg-[#F3F3F1]
   rounded-xl
   overflow-hidden
   border border-black/5
