@@ -2,9 +2,9 @@ import { primaryNav, sections } from "@/data/sidebarData";
 
 export default function Sidebar() {
   return (
-    <aside className="fixed left-0 top-0 h-screen w-[165px] 
-                       bg-[#F3F3F1] border-r border-[#E6E6E4] 
-                       overflow-y-auto">
+<aside className="w-[165px] shrink-0 h-screen 
+                   bg-[#F3F3F1] border-r border-[#E6E6E4] 
+                   overflow-y-auto">
 
       <div className="pt-[14px] pl-[24px] pr-3 space-y-[14px] pb-5">
 

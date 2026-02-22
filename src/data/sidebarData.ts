@@ -6,11 +6,9 @@ export type NavItem = {
   external?: boolean;
 };
 export const primaryNav: NavItem[] = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Ideas", href: "/ideas" },
   { label: "CV", href: "/cv" },
-  { label: "Work", href: "/work" },
 ];
 
 export const sections: {
