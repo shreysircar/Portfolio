@@ -16,31 +16,40 @@ export default function ProductCard({
   year,
   image,
   href,
+  variant = "medium",
 }: ProductCardProps) {
+
+  // 🔥 Height control
+  const aspectClass =
+    variant === "tall"
+      ? "aspect-[3/5]"      // clearly taller
+      : variant === "wide"
+      ? "aspect-[16/10]"    // shorter / landscape
+      : "aspect-[4/5]";     // balanced
 
   const CardInner = (
     <div className="group w-full">
 
-      {/* Image Frame — variable height */}
+      {/* Image Frame */}
       <div
-        className="
-          relative
-          w-full
-          bg-[#F3F3F1]
-          rounded-xl
-          overflow-hidden
-          shadow-[0_6px_18px_rgba(0,0,0,0.06)]
-          transition-shadow duration-300 ease-out
-          group-hover:shadow-[0_16px_40px_rgba(0,0,0,0.12)]
-        "
+       className={`
+  relative
+  w-full
+  ${aspectClass}
+  bg-white
+  rounded-xl
+  overflow-hidden
+  border border-black/5
+  shadow-[0_8px_24px_rgba(0,0,0,0.06)]
+  transition-all duration-300 ease-out
+  group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.14)]
+`}
       >
         <Image
           src={image}
           alt={title}
-          width={1600}
-          height={1200}
-          className="w-full h-auto object-contain"
-          priority={false}
+          fill
+          className="object-contain"
         />
       </div>
 

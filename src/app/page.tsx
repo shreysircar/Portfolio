@@ -35,7 +35,7 @@ export default function Home() {
             year="2026"
             image="/images/pagex.png"
             href="/work/pagex"
-            variant="medium"
+            variant="wide"
           />
 
         </div>
@@ -52,7 +52,14 @@ export default function Home() {
             variant="wide"
           />
 
-          {/* Future card slot */}
+            <ProductCard
+            title="Aegis"
+            subtitle="Web/Mobile Platform"
+            year="2025"
+            image="/images/musings.png"
+            href="/work/aegis"
+            variant="medium"
+          />
 
         </div>
 
@@ -65,9 +72,16 @@ export default function Home() {
             year="2025"
             image="/images/musings.png"
             href="/work/aegis"
-            variant="wide"
+            variant="medium"
           />
-
+     <ProductCard
+            title="Aegis"
+            subtitle="Web/Mobile Platform"
+            year="2025"
+            image="/images/musings.png"
+            href="/work/aegis"
+            variant="tall"
+          />
         </div>
 
       </div>
