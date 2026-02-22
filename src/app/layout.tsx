@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import RouteTransition from "@/components/ui/RouteTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export default function RootLayout({
 
         <main className="ml-[165px]">
           <div className="max-w-2xl mx-auto px-6 py-12">
-            {children}
+            <RouteTransition>
+              {children}
+            </RouteTransition>
           </div>
         </main>
       </body>
