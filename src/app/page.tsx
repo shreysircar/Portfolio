@@ -1,6 +1,14 @@
+"use client";
+
 import ProductCard from "@/components/ui/ProductCard";
+import { useState } from "react";
+import MacModal from "@/components/ui/MacModal";
 
 export default function Home() {
+
+  const [activeSkill, setActiveSkill] = useState<string | null>(null);
+  const [minimized, setMinimized] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const now = new Date();
   const formattedDate = now.toLocaleDateString("en-US", {
@@ -30,7 +38,7 @@ export default function Home() {
   </div>
 
   {/* Editorial Hero Text */}
-  <div className="max-w-5xl mb-14">
+  <div className="max-w-5xl mb-6">
     <h1 className="
       text-[28px] md:text-[30px] lg:text-[35px]
       font-medium
@@ -127,6 +135,103 @@ Shrey engineers scalable, production-grade systems grounded in modular architect
         </div>
 
       </div>
-    </div>
+
+
+{/* Skills Divider */}
+<div className="mt-20 mb-8">
+  <div className="h-px w-full bg-neutral-200 mb-4" />
+  <p className="text-[20px] font-medium text-neutral-700 tracking-tight">
+    Skills & Technologies
+  </p>
+</div>
+
+<div className="space-y-4 text-[18px] text-neutral-700 max-w-5xl">
+  {[
+    "Web Engineering",
+    "Mobile Systems",
+    "Backend & Architecture",
+    "Algorithms & Problem Solving",
+    "Tooling & Collaboration",
+  ].map((item) => (
+    <button
+      key={item}
+      onClick={() => {
+        setActiveSkill(item);
+        setMinimized(false);
+      }}
+      className="block hover:text-neutral-400 transition-colors"
+    >
+      {item}
+    </button>
+  ))}
+</div>
+{/* Mac Modal */}
+<MacModal
+  isOpen={!!activeSkill && !minimized}
+  title={activeSkill || ""}
+  expanded={expanded}
+  onClose={() => {
+    setActiveSkill(null);
+    setExpanded(false);
+  }}
+  onMinimize={() => setMinimized(true)}
+  onExpand={() => setExpanded(!expanded)}
+>
+  <div className="space-y-4 text-[14px] leading-relaxed">
+
+    {activeSkill === "Web Engineering" && (
+      <>
+        <p>Production-ready web platforms built with scalable architectures.</p>
+        <p>• React.js, Next.js, Node.js, Express</p>
+        <p>• PostgreSQL, Prisma ORM</p>
+      </>
+    )}
+
+    {activeSkill === "Mobile Systems" && (
+      <>
+        <p>Cross-platform applications with real-time data pipelines.</p>
+        <p>• Flutter / Dart</p>
+        <p>• Firebase integration</p>
+      </>
+    )}
+
+    {activeSkill === "Backend & Architecture" && (
+      <>
+        <p>Modular, secure systems grounded in clean architecture.</p>
+        <p>• JWT Authentication</p>
+        <p>• SOLID principles</p>
+      </>
+    )}
+
+    {activeSkill === "Algorithms & Problem Solving" && (
+      <>
+        <p>Competitive programming and algorithmic challenges in C++.</p>
+        <p>• Graph Algorithms</p>
+        <p>• Dynamic Programming</p>
+      </>
+    )}
+
+    {activeSkill === "Tooling & Collaboration" && (
+      <>
+        <p>Structured engineering workflows.</p>
+        <p>• Git/GitHub</p>
+        <p>• Postman API testing</p>
+      </>
+    )}
+
+  </div>
+</MacModal>
+
+{/* Minimized Dock */}
+{minimized && activeSkill && (
+  <div
+    onClick={() => setMinimized(false)}
+    className="fixed bottom-6 right-6 bg-white shadow-lg border border-neutral-200 rounded-full px-4 py-2 cursor-pointer text-sm text-neutral-600"
+  >
+    {activeSkill}
+  </div>
+)}
+
+</div>
   );
 }
