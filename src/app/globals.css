@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background: #F3F3F3;   /* pure white */
+  background: #F3F3F3;   /* not pure white */
   color: #2C2C2C;        /* not pure black */
   font-feature-settings: "ss01" on;
 }
@@ -20,4 +20,9 @@ a:visited {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+.image-fade {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
 }

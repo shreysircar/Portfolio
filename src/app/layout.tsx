@@ -20,7 +20,7 @@ export default function RootLayout({
         <Sidebar />
 
 <main className="ml-[165px] w-[calc(100%-165px)]">
-          <div className="px-6 py-12">
+          <div className="px-6">
             <RouteTransition>
               {children}
             </RouteTransition>

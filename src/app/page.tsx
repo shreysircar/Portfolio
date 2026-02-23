@@ -30,7 +30,7 @@ export default function Home() {
   });
 
   return (
-  <div className="px-6 pt-2 pb-16">  {/* reduced top padding further */}
+  <div className="px-6 pt-16 pb-16">  {/* reduced top padding further */}
 
   {/* Top Row */}
   <div className="flex justify-between items-start mb-6">
@@ -47,7 +47,7 @@ className="
   text-[22px]
   tracking-tight
   bg-gradient-to-r
-  from-neutral-400
+  from-neutral-500
   via-neutral-500
   to-neutral-600
   bg-clip-text

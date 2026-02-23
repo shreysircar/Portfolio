@@ -1,5 +1,5 @@
 import { primaryNav, sections } from "@/data/sidebarData";
-
+import Link from "next/link";
 export default function Sidebar() {
   return (
 <aside
@@ -19,11 +19,13 @@ export default function Sidebar() {
       <div className="pt-[14px] pl-[24px] pr-3 space-y-[12px] pb-5">
 
         {/* LOGO */}
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className="w-[95px] h-auto"
-        />
+<Link href="/" className="block w-fit">
+  <img
+    src="/logo.png"
+    alt="Logo"
+    className="w-[95px] h-auto cursor-pointer"
+  />
+</Link>
 
         {/* PRIMARY NAV */}
 <nav className="space-y-[4px] text-[15px]">
