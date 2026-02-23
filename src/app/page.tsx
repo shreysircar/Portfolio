@@ -1,18 +1,60 @@
 import ProductCard from "@/components/ui/ProductCard";
 
 export default function Home() {
+
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "short",
+    day: "numeric",
+  });
+  const formattedTime = now.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
   return (
-<div className="px-6 py-16">
+  <div className="px-6 pt-2 pb-16">  {/* reduced top padding further */}
 
-      {/* Intro */}
-      <p className="text-sm text-neutral-400 mb-6">
-        Hello there, 欢迎!
-      </p>
+  {/* Top Row */}
+  <div className="flex justify-between items-start mb-6">
 
-      <h1 className="text-5xl font-semibold leading-tight tracking-tight text-neutral-800 max-w-4xl">
-        Shrey is crafting systems and interfaces
-        that feel natural and useful.
-      </h1>
+    <p className="text-base text-neutral-500">
+      Hello there, 欢迎!
+    </p>
+
+    <p className="text-base text-neutral-500">
+      {formattedDate} &nbsp; {formattedTime}
+    </p>
+
+  </div>
+
+  {/* Editorial Hero Text */}
+  <div className="max-w-5xl mb-14">
+    <h1 className="
+      text-[28px] md:text-[30px] lg:text-[35px]
+      font-medium
+      leading-[1.25]
+      tracking-[-0.01em]
+      bg-gradient-to-r
+      from-neutral-400
+      via-neutral-600
+      to-neutral-800
+      bg-clip-text
+      text-transparent
+    ">
+Shrey engineers scalable, production-grade systems grounded in modular architecture and efficient design. He builds performance-driven applications — optimizing APIs, data flow, and databases to deliver reliable software at scale.
+    </h1>
+  </div>
+
+{/* Section Divider */}
+<div className="mt-4 mb-3">
+  <div className="h-px w-full bg-neutral-200 mb-3" />
+
+  <p className="text-[12px] tracking-[0.06em] text-neutral-400">
+    WORK
+  </p>
+</div>
 
       {/* Three Column Editorial Layout */}
  <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -22,7 +64,7 @@ export default function Home() {
 
           <ProductCard
             title="Musings"
-            subtitle="Mobile App"
+            subtitle="Minimal Music App"
             year="2023-2024"
             image="/images/musings.png"
             href="/work/musings"

@@ -32,17 +32,17 @@ export default function ProductCard({
 
       {/* Image Frame */}
       <div
-       className={`
+className={`
   relative
   w-full
   ${aspectClass}
-  bg-[#F3F3F1]
+  bg-white
   rounded-xl
   overflow-hidden
   border border-black/5
-  shadow-[0_8px_24px_rgba(0,0,0,0.06)]
+  shadow-[0_3px_10px_rgba(0,0,0,0.04)]
   transition-all duration-300 ease-out
-  group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.14)]
+  group-hover:shadow-[0_18px_45px_rgba(0,0,0,0.12)]
 `}
       >
         <Image
@@ -53,23 +53,23 @@ export default function ProductCard({
         />
       </div>
 
-      {/* Typography */}
-      <div className="mt-3 flex items-start justify-between">
+{/* Typography */}
+<div className="mt-3 flex items-start justify-between">
 
-        <div className="leading-tight">
-          <div className="text-[15px] font-medium text-[#2C2C2C]">
-            {title}
-          </div>
-          <div className="text-[13px] text-[#8A8A8A]">
-            {subtitle}
-          </div>
-        </div>
+  <div className="leading-tight">
+    <div className="text-[15px] font-semibold text-[#2C2C2C]">
+      {title}
+    </div>
+    <div className="text-[13px] font-medium text-[#8A8A8A]">
+      {subtitle}
+    </div>
+  </div>
 
-        <div className="text-[12px] text-[#9A9A9A]">
-          {year}
-        </div>
+  <div className="text-[12px] text-[#9A9A9A]">
+    {year}
+  </div>
 
-      </div>
+</div>
     </div>
   );
 
