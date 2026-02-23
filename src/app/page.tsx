@@ -96,6 +96,7 @@ Shrey is a software engineering undergrad building end-to-end systems with layer
             variant="tall"
           />
 
+
           <ProductCard
             title="Pagex"
             subtitle="Web Platform"
@@ -118,6 +119,7 @@ Shrey is a software engineering undergrad building end-to-end systems with layer
             href="/work/vaaya"
             variant="wide"
           />
+
 
             <ProductCard
             title="Aegis"
@@ -227,7 +229,24 @@ md:text-[17px]
     </button>
   ))}
 </div>
-
+{/* Closing Statement */}
+<div className="mt-8 pt-4 border-t border-neutral-200">
+  <motion.p
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    className="
+      text-center
+      text-[22px] md:text-[24px]
+      font-semibold
+      tracking-[-0.01em]
+      text-neutral-500
+    "
+  >
+    Design. Optimize. Scale.
+  </motion.p>
+</div>
 {/* Mac Modal */}
 <MacModal
   isOpen={!!activeSkill && !minimized}
