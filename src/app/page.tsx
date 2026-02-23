@@ -1,5 +1,11 @@
 "use client";
-
+import {
+  Monitor,
+  Smartphone,
+  Server,
+  Cpu,
+  Wrench
+} from "lucide-react";
 import ProductCard from "@/components/ui/ProductCard";
 import { useState } from "react";
 import MacModal from "@/components/ui/MacModal";
@@ -145,26 +151,68 @@ Shrey engineers scalable, production-grade systems grounded in modular architect
   </p>
 </div>
 
-<div className="space-y-4 text-[18px] text-neutral-700 max-w-5xl">
+<div className="max-w-5xl divide-y divide-neutral-200">
   {[
-    "Web Engineering",
-    "Mobile Systems",
-    "Backend & Architecture",
-    "Algorithms & Problem Solving",
-    "Tooling & Collaboration",
-  ].map((item) => (
+    { label: "Web Engineering", icon: Monitor },
+    { label: "Mobile Systems", icon: Smartphone },
+    { label: "Backend & Architecture", icon: Server },
+    { label: "Algorithms & Problem Solving", icon: Cpu },
+    { label: "Tooling & Collaboration", icon: Wrench },
+  ].map(({ label, icon: Icon }) => (
     <button
-      key={item}
+      key={label}
       onClick={() => {
-        setActiveSkill(item);
+        setActiveSkill(label);
         setMinimized(false);
       }}
-      className="block hover:text-neutral-400 transition-colors"
+      className="
+        group
+        w-full
+        py-5
+        text-left
+        flex
+        items-center
+        justify-between
+        transition-all
+        duration-300
+      "
     >
-      {item}
+      <div className="flex items-center gap-4">
+
+        <Icon
+          size={20}
+          strokeWidth={1.5}
+          className="
+            text-neutral-400
+            group-hover:text-neutral-700
+            transition-colors
+          "
+        />
+
+        <span className="
+          text-[18px]
+          md:text-[19px]
+          font-medium
+          tracking-[-0.01em]
+          text-neutral-700
+          group-hover:text-neutral-900
+          transition-colors
+        ">
+          {label}
+        </span>
+      </div>
+
+      <span className="
+        text-neutral-300
+        group-hover:text-neutral-500
+        transition-colors
+      ">
+        →
+      </span>
     </button>
   ))}
 </div>
+
 {/* Mac Modal */}
 <MacModal
   isOpen={!!activeSkill && !minimized}
