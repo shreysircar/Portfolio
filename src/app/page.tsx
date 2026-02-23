@@ -7,6 +7,7 @@ import {
   Wrench,
   ArrowUpRight   // ADD THIS
 } from "lucide-react";
+import { motion } from "framer-motion";
 import ProductCard from "@/components/ui/ProductCard";
 import { useState } from "react";
 import MacModal from "@/components/ui/MacModal";
@@ -34,9 +35,18 @@ export default function Home() {
   {/* Top Row */}
   <div className="flex justify-between items-start mb-6">
 
-    <p className="text-base text-neutral-500">
-      Hello there !
-    </p>
+<motion.p
+  initial={{ opacity: 0, y: 10, scale: 0.97 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{
+    duration: 1.2,
+    delay: 0.2,
+    ease: [0.16, 1, 0.3, 1], // smoother, softer ease
+  }}
+  className="text-[22px] tracking-tight text-neutral-500"
+>
+  Hello.
+</motion.p>
 
     <p className="text-base text-neutral-500">
       {formattedDate} &nbsp; {formattedTime}
@@ -54,11 +64,11 @@ export default function Home() {
       bg-gradient-to-r
       from-neutral-400
       via-neutral-600
-      to-neutral-800
+      to-neutral-700
       bg-clip-text
       text-transparent
     ">
-Shrey engineers scalable, production-grade systems grounded in modular architecture and efficient design. He builds performance-driven applications — optimizing APIs, data flow, and databases to deliver reliable software at scale.
+Shrey is a software engineering undergrad building end-to-end systems with layered architecture and optimized data flows, focused on maintainability, performance, and scalable design.
     </h1>
   </div>
 
