@@ -4,7 +4,8 @@ import {
   Smartphone,
   Server,
   Cpu,
-  Wrench
+  Wrench,
+  ArrowUpRight   // ADD THIS
 } from "lucide-react";
 import ProductCard from "@/components/ui/ProductCard";
 import { useState } from "react";
@@ -34,7 +35,7 @@ export default function Home() {
   <div className="flex justify-between items-start mb-6">
 
     <p className="text-base text-neutral-500">
-      Hello there, 欢迎!
+      Hello there !
     </p>
 
     <p className="text-base text-neutral-500">
@@ -146,9 +147,9 @@ Shrey engineers scalable, production-grade systems grounded in modular architect
 {/* Skills Divider */}
 <div className="mt-20 mb-8">
   <div className="h-px w-full bg-neutral-200 mb-4" />
-  <p className="text-[20px] font-medium text-neutral-700 tracking-tight">
-    Skills & Technologies
-  </p>
+<p className="text-[12px] tracking-[0.06em] text-neutral-400">
+  ENGINEERING DOMAINS
+</p>
 </div>
 
 <div className="max-w-5xl divide-y divide-neutral-200">
@@ -179,19 +180,19 @@ Shrey engineers scalable, production-grade systems grounded in modular architect
     >
       <div className="flex items-center gap-4">
 
-        <Icon
-          size={20}
-          strokeWidth={1.5}
-          className="
-            text-neutral-400
-            group-hover:text-neutral-700
-            transition-colors
-          "
-        />
+<Icon
+  size={20}
+  strokeWidth={1.5}
+className="
+  text-neutral-400
+  group-hover:text-neutral-700
+  transition-colors
+"
+/>
 
         <span className="
-          text-[18px]
-          md:text-[19px]
+text-[16px]
+md:text-[17px]
           font-medium
           tracking-[-0.01em]
           text-neutral-700
@@ -202,13 +203,17 @@ Shrey engineers scalable, production-grade systems grounded in modular architect
         </span>
       </div>
 
-      <span className="
-        text-neutral-300
-        group-hover:text-neutral-500
-        transition-colors
-      ">
-        →
-      </span>
+<ArrowUpRight
+  size={18}
+  strokeWidth={1.5}
+  className="
+    text-neutral-400
+    group-hover:text-neutral-700
+    transition-colors
+    group-hover:translate-x-1
+    group-hover:-translate-y-1
+  "
+/>
     </button>
   ))}
 </div>
@@ -229,41 +234,63 @@ Shrey engineers scalable, production-grade systems grounded in modular architect
 
     {activeSkill === "Web Engineering" && (
       <>
-        <p>Production-ready web platforms built with scalable architectures.</p>
-        <p>• React.js, Next.js, Node.js, Express</p>
-        <p>• PostgreSQL, Prisma ORM</p>
+        <p>I build scalable, production-ready web applications using modern React ecosystems. My focus is modular component design, predictable data flow, and performance across responsive systems.</p>
+        <p><b>Tech Stack</b></p>
+        <p>• React.js, Next.js (App Router)</p>
+        <p>• JavaScript</p>
+        <p>• RESTful APIs</p>
+        <p>• Firebase, Firestore</p>
+        <p>• Git/GitHub, Figma</p>
       </>
     )}
 
     {activeSkill === "Mobile Systems" && (
       <>
-        <p>Cross-platform applications with real-time data pipelines.</p>
-        <p>• Flutter / Dart</p>
-        <p>• Firebase integration</p>
+        <p>I develop cross-platform mobile systems in Flutter with clean architecture and scalable state separation. My approach ensures smooth API integration and maintainable feature growth.</p>
+        <p><b>Tech Stack</b></p>
+        <p>• Dart (Flutter)</p>
+        <p>• Firebase</p>
+        <p>• RESTful APIs</p>
+        <p>• Clean Architecture principles</p>
+        <p>• Git/GitHub</p>
+
       </>
     )}
 
     {activeSkill === "Backend & Architecture" && (
       <>
-        <p>Modular, secure systems grounded in clean architecture.</p>
+        <p>I design backend systems focused on structured APIs, secure authentication, and scalable database architecture. My backend philosophy emphasizes modular services and efficient data modeling.</p>
+        <p><b>Tech Stack</b></p>
+        <p>• Node.js, Express.js</p>
+        <p>• PostgreSQL, SQL</p>
+        <p>• Prisma ORM</p>
         <p>• JWT Authentication</p>
-        <p>• SOLID principles</p>
+        <p>• RESTful APIs</p>
+        <p>• Postman</p>
       </>
     )}
 
     {activeSkill === "Algorithms & Problem Solving" && (
       <>
-        <p>Competitive programming and algorithmic challenges in C++.</p>
-        <p>• Graph Algorithms</p>
-        <p>• Dynamic Programming</p>
+        <p>Strong algorithmic reasoning drives my system design decisions. I apply data structures and complexity analysis to build efficient and scalable implementations.</p>
+        <p><b>Core Foundations</b></p>
+        <p>• C/C++</p>
+        <p>• Data Structures & Algorithms</p>
+        <p>• Object-Oriented Programming (OOPS)</p>
+        <p>• System Design</p>
+        <p>• Operating Systems</p>
       </>
     )}
 
     {activeSkill === "Tooling & Collaboration" && (
       <>
-        <p>Structured engineering workflows.</p>
+        <p>I value disciplined workflows, clean version control, and structured development cycles. My tooling ensures clarity, maintainability, and efficient collaboration.</p>
+        <p><b>Tools & Environment</b></p>
+        <p>• Prisma Studio</p>
         <p>• Git/GitHub</p>
-        <p>• Postman API testing</p>
+        <p>• Figma</p>
+        <p>• Windows, Linux (Ubuntu) </p>
+        <p>• SDLC practices</p>
       </>
     )}
 
