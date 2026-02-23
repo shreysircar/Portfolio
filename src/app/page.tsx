@@ -43,7 +43,16 @@ export default function Home() {
     delay: 0.2,
     ease: [0.16, 1, 0.3, 1], // smoother, softer ease
   }}
-  className="text-[22px] tracking-tight text-neutral-500"
+className="
+  text-[22px]
+  tracking-tight
+  bg-gradient-to-r
+  from-neutral-400
+  via-neutral-500
+  to-neutral-600
+  bg-clip-text
+  text-transparent
+"
 >
   Hello.
 </motion.p>
@@ -62,8 +71,8 @@ export default function Home() {
       leading-[1.25]
       tracking-[-0.01em]
       bg-gradient-to-r
-      from-neutral-400
-      via-neutral-600
+      from-neutral-500
+      via-neutral-550
       to-neutral-700
       bg-clip-text
       text-transparent
@@ -231,18 +240,26 @@ md:text-[17px]
 </div>
 {/* Closing Statement */}
 <div className="mt-8 pt-4 border-t border-neutral-200">
-  <motion.p
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-    className="
-      text-center
-      text-[22px] md:text-[24px]
-      font-semibold
-      tracking-[-0.01em]
-      text-neutral-500
-    "
+<motion.p
+  initial={{ opacity: 0, y: 10, scale: 0.97 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{
+    duration: 1.2,
+    delay: 0.2,
+    ease: [0.16, 1, 0.3, 1], // smoother, softer ease
+  }}
+className="
+  text-center
+  text-[22px] md:text-[24px]
+  font-semibold
+  tracking-[-0.01em]
+  bg-gradient-to-r
+  from-neutral-400
+  via-neutral-500
+  to-neutral-800
+  bg-clip-text
+  text-transparent
+"
   >
     Design. Optimize. Scale.
   </motion.p>
