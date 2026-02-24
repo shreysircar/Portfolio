@@ -7,7 +7,7 @@ type ProductCardProps = {
   year: string;
   image: string;
   href?: string;
-  variant?: "tall" | "medium" | "wide";
+  variant?: "tall" | "medium" | "wide" | "square";
 };
 
 export default function ProductCard({
@@ -20,15 +20,17 @@ export default function ProductCard({
 }: ProductCardProps) {
 
   // 🔥 Height control
-  const aspectClass =
-    variant === "tall"
-      ? "aspect-[3/5]"      // clearly taller
-      : variant === "wide"
-      ? "aspect-[16/10]"    // shorter / landscape
-      : "aspect-[4/5]";     // balanced
+const aspectClass =
+  variant === "tall"
+    ? "aspect-[3/5]"
+    : variant === "wide"
+    ? "aspect-[16/10]"
+    : variant === "square"
+    ? "aspect-square"
+    : "aspect-[4/5]";
 
   const CardInner = (
-    <div className="group w-full">
+<div className={`group ${variant === "square" ? "w-[65%]" : "w-full"}`}>
 
       {/* Image Frame */}
       <div

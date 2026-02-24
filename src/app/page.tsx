@@ -324,7 +324,6 @@ className="
         <p>• Data Structures & Algorithms</p>
         <p>• Object-Oriented Programming (OOPS)</p>
         <p>• System Design</p>
-        <p>• Operating Systems</p>
       </>
     )}
 
