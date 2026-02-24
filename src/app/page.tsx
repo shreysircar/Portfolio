@@ -47,7 +47,7 @@ className="
   text-[22px]
   tracking-tight
   bg-gradient-to-r
-  from-neutral-500
+  from-neutral-400
   via-neutral-500
   to-neutral-600
   bg-clip-text
@@ -71,7 +71,7 @@ className="
       leading-[1.25]
       tracking-[-0.01em]
       bg-gradient-to-r
-      from-neutral-500
+      from-neutral-400
       via-neutral-550
       to-neutral-700
       bg-clip-text
@@ -256,7 +256,7 @@ className="
   bg-gradient-to-r
   from-neutral-400
   via-neutral-500
-  to-neutral-800
+  to-neutral-600
   bg-clip-text
   text-transparent
 "

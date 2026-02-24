@@ -7,7 +7,7 @@ export type NavItem = {
 };
 export const primaryNav: NavItem[] = [
   { label: "About", href: "/about" },
-  { label: "CV", href: "/cv" },
+  { label: "CV", href: "/Shrey_CV.pdf"},
 ];
 
 export const sections: {
@@ -34,7 +34,6 @@ export const sections: {
       { label: "Mail", href: "mailto:sircarshrey@email.com", external: true },
       { label: "Instagram", href: "https://instagram.com/musingsbyshrey", external: true },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/shrey-sircar-907629283/", external: true },
-      { label: "read.cv", href: "/Shrey_CV.pdf" },
       { label: "Leetcode", href: "https://leetcode.com/u/shrey_2904", external: true },
       { label: "GitHub", href: "https://github.com/shreysircar", external: true },
     ],

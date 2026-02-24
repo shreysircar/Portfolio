@@ -6,7 +6,7 @@ import LifeSection from "./components/LifeSection"
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#F3F3F3] text-neutral-800">
+    <main className="bg-[#F3F3F3] text-neutral-800 relative">
       <HeroSection />
       <InfoSection />
       <EducationSection />

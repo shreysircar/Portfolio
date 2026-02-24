@@ -33,7 +33,8 @@ export default function Sidebar() {
     <a
       key={item.label}
       href={item.href}
-className="block no-underline font-semibold tracking-[-0.01em] text-[#2C2C2C] hover:text-neutral-400 transition-colors duration-150"
+      download={item.href.endsWith(".pdf")}
+      className="block no-underline font-semibold tracking-[-0.01em] text-[#2C2C2C] hover:text-neutral-400 transition-colors duration-150"
     >
       {item.label}
     </a>
