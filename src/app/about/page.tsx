@@ -7,6 +7,18 @@ import LifeSection from "./components/LifeSection"
 export default function AboutPage() {
   return (
     <main className="bg-[#F3F3F3] text-neutral-800 relative">
+      <div className="
+  pt-6
+  pl-10 lg:pl-24
+  text-[11px]
+  md:text-[12px]
+  font-medium
+  tracking-[0.18em]
+  text-neutral-400
+  uppercase
+">
+  SOFTWARE ENGINEERING • SYSTEM DESIGN 
+</div>
       <HeroSection />
       <InfoSection />
       <EducationSection />

@@ -3,8 +3,8 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-8 pb-24 bg-[#f3f3f3]">
-      <div className="grid lg:grid-cols-2 items-start">
+    <section className="relative pt-8 pb-0 bg-[#f3f3f3]">
+      <div className="grid lg:grid-cols-[1fr_1.4fr] items-start">
 
         {/* Left Text */}
         <div className="relative pl-10 lg:pl-24 mt-16 lg:mt-15 overflow-hidden">
@@ -47,7 +47,7 @@ export default function HeroSection() {
               absolute
               inset-y-0
               left-0
-              w-52
+              w-82
               bg-gradient-to-r
               from-[#f3f3f3]/80
               via-[#f3f3f3]/40
@@ -57,7 +57,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Images */}
-        <div className="relative flex gap-6 items-start -mt-4 overflow-hidden">
+<div className="relative flex gap-3 items-start -mt-12 overflow-hidden">
 
           {/* Left Edge Fog */}
           <div
@@ -120,20 +120,20 @@ export default function HeroSection() {
   "
 />
           {/* Images */}
-          <div className="relative w-90 h-60 mt-30 rounded-2xl overflow-hidden shadow-md">
+          <div className="relative w-100 h-55 mt-20 rounded-lg overflow-hidden shadow-md">
             <Image src="/about/hero-left.jpg" alt="" fill className="object-cover" />
           </div>
 
-          <div className="relative w-60 h-72 mt-5 rounded-2xl overflow-hidden shadow-md">
+          <div className="relative w-100 h-60 mt-5 rounded-lg overflow-hidden shadow-md">
             <Image src="/about/hero-main.jpg" alt="" fill className="object-cover" />
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="relative w-36 h-36 mt-5 rounded-2xl overflow-hidden shadow-md">
+            <div className="relative w-44 h-44 mt-0 rounded-lg overflow-hidden shadow-md">
               <Image src="/about/hero-square.jpg" alt="" fill className="object-cover" />
             </div>
 
-            <div className="relative w-44 h-60 rounded-2xl overflow-hidden shadow-md brightness-95">
+            <div className="relative w-34 h-40 rounded-lg overflow-hidden shadow-md ">
               <Image src="/about/hero-right.jpg" alt="" fill className="object-cover" />
             </div>
           </div>
