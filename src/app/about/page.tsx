@@ -1,7 +1,7 @@
 import HeroSection from "./components/HeroSection"
 import InfoSection from "./components/InfoSection"
 import EducationSection from "./components/EducationSection"
-import DesignFoundationSection from "./components/DesignFoundationSection"
+import DesignFoundationSection from "./components/ExperienceSection"
 import LifeSection from "./components/LifeSection"
 
 export default function AboutPage() {
