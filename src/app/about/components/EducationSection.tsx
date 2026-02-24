@@ -30,10 +30,10 @@ const [minimized, setMinimized] = useState(false);
       </div>
 
       {/* Main Content Container */}
-      <div className="px-10 lg:px-24 space-y-28">
+      <div className="px-10 lg:px-24 space-y-10">
 
         {/* ================= SCHOOLING ================= */}
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
 
           {/* Text Left */}
 <div className="flex justify-between items-start max-w-lg group">
@@ -52,7 +52,7 @@ const [minimized, setMinimized] = useState(false);
       Senior Secondary Education
     </p>
 
-    <p className="text-neutral-600 leading-relaxed">
+<p className="text-[12px] text-neutral-600 leading-relaxed">
       Early academic foundation rooted in mathematics, structured reasoning,
       and analytical discipline. These formative years shaped systems thinking
       and a strong problem-solving mindset.
@@ -83,7 +83,7 @@ const [minimized, setMinimized] = useState(false);
 
           {/* Image Right */}
           <div className="max-w-md">
-            <div className="relative w-[300px] h-[250px] rounded-lg overflow-hidden">
+            <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden">
               <Image
                 src="/about/school.jpg"
                 alt="School campus"
@@ -96,18 +96,17 @@ const [minimized, setMinimized] = useState(false);
   <div className="absolute inset-0 bg-gradient-to-r from-[#F3F3F3]/60 via-transparent to-[#F3F3F3]/60" />
 </div>
 </div>
-            <p className="mt-4 text-sm text-neutral-500">
+            <p className="mt-4 text-[12px] text-neutral-500">
               School campus during graduation year
             </p>
           </div>
         </div>
 
         {/* ================= COLLEGE ================= */}
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
-
+      <div className="grid lg:grid-cols-[auto_1fr] gap-15 items-start">
           {/* Image Left */}
           <div className="max-w-md">
-            <div className="relative w-[300px] h-[250px] rounded-lg overflow-hidden">
+            <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden">
               <Image
                 src="/about/college.png"
                 alt="College campus"
@@ -121,13 +120,13 @@ const [minimized, setMinimized] = useState(false);
 </div>
             </div>
 
-            <p className="mt-4 text-sm text-neutral-500">
+            <p className="mt-4 text-[12px] text-neutral-500">
               University campus 
             </p>
           </div>
 
           {/* Text Right */}
-<div className="flex justify-between items-start max-w-lg group">
+<div className="flex justify-between items-start w-full group">
 
   <div className="space-y-6">
     <h2 className="
@@ -142,8 +141,7 @@ const [minimized, setMinimized] = useState(false);
     <p className="text-[15px] text-neutral-400 font-semibold">
       B.Tech in Computer Science
     </p>
-
-    <p className="text-neutral-600 leading-relaxed">
+<p className="text-[12px] text-neutral-600 leading-relaxed">
       Currently pursuing undergraduate studies with emphasis on
       software engineering, distributed systems, scalable backend
       design, and production-grade architecture across layered systems.

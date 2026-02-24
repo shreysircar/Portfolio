@@ -33,7 +33,7 @@ export default function LifeSection() {
             Creative discipline and competitive focus shape how I build systems.
           </h2>
 
-          <div className="space-y-6 text-[15px] text-neutral-600 leading-relaxed">
+          <div className="space-y-6 text-[12px] text-neutral-600 leading-relaxed">
 
 <p>
   Trained in Hindustani classical music, I create vocal covers and original productions across digital platforms, building an audience of 3K+ on Instagram and 150+ on YouTube.
@@ -54,7 +54,7 @@ export default function LifeSection() {
 
      
 {/* RIGHT IMAGE LAYOUT */}
-<div className="relative w-full">
+<div className="relative w-[72%]">
 
   {/* Fog Overlay */}
   <div className="pointer-events-none absolute inset-0 z-10">
