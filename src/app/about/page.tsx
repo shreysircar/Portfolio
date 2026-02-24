@@ -17,7 +17,7 @@ export default function AboutPage() {
   text-neutral-400
   uppercase
 ">
-  SOFTWARE ENGINEERING • SYSTEM DESIGN 
+  System-first thinking.
 </div>
       <HeroSection />
       <InfoSection />
