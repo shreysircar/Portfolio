@@ -256,7 +256,7 @@ className="
   bg-gradient-to-r
   from-neutral-400
   via-neutral-500
-  to-neutral-600
+  to-neutral-800
   bg-clip-text
   text-transparent
 "

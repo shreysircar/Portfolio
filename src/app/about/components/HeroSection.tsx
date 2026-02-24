@@ -3,85 +3,139 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <section className="pt-8 pb-24">
+    <section className="relative pt-8 pb-24 bg-[#f3f3f3]">
       <div className="grid lg:grid-cols-2 items-start">
 
         {/* Left Text */}
-<div className="pl-10 lg:pl-24 mt-16 lg:mt-20">
-  <h1 className="
-    text-[60px] 
-    md:text-[76px] 
-    lg:text-[90px]
-    font-semibold 
-    leading-[0.95] 
-    tracking-[-0.02em]
-    bg-gradient-to-r
-    from-neutral-700
-    via-neutral-800
-    to-neutral-900
-    bg-clip-text
-    text-transparent
-  ">
-    Shrey Sircar
-  </h1>
+        <div className="relative pl-10 lg:pl-24 mt-16 lg:mt-15 overflow-hidden">
 
-  <div className="
-    mt-2 
-    pl-40 
-    text-[16px] 
-    md:text-[18px] 
-    text-neutral-500 
-    tracking-[0.05em]
-  ">
-    /ʃreɪ ˈsɜːr.kɑːr/
-  </div>
+          <h1 className="
+            text-[60px] 
+            md:text-[76px] 
+            lg:text-[90px]
+            font-semibold 
+            leading-[0.95] 
+            tracking-[-0.02em]
+            bg-gradient-to-r
+            from-neutral-600
+            via-neutral-700
+            to-neutral-800
+            bg-clip-text
+            text-transparent
+          ">
+            Shrey Sircar
+          </h1>
+
+<div className="
+  mt-1
+  ml-[6.25rem]
+  md:ml-[7.75rem]
+  lg:ml-[9.5rem]
+  text-[15px] 
+  md:text-[17px] 
+  font-semibold
+  text-neutral-400
+  tracking-[0.14em]
+">
+  /ʃreɪ ˈsɜːr.kɑːr/
 </div>
+
+          {/* Left Fog */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-y-0
+              left-0
+              w-52
+              bg-gradient-to-r
+              from-[#f3f3f3]/80
+              via-[#f3f3f3]/40
+              to-transparent
+            "
+          />
+        </div>
+
         {/* Right Images */}
-        <div className="flex gap-6 items-start -mt-4">
+        <div className="relative flex gap-6 items-start -mt-4 overflow-hidden">
 
-          {/* Left Tall */}
-          <div className="relative w-90 h-60 mt-30 rounded-lg overflow-hidden">
-            <Image
-              src="/about/hero-left.jpg"
-              alt=""
-              fill
-              className="object-cover"
-            />
+          {/* Left Edge Fog */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-y-0
+              left-0
+              w-28
+              bg-gradient-to-r
+              from-[#f3f3f3]/70
+              to-transparent
+              z-10
+            "
+          />
+
+          {/* Right Edge Fog */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-y-0
+              right-0
+              w-28
+              bg-gradient-to-l
+              from-[#f3f3f3]/70
+              to-transparent
+              z-10
+            "
+          />
+{/* Top Fog */}
+<div
+  className="
+    pointer-events-none
+    absolute
+    top-0
+    left-0
+    right-0
+    h-44
+    bg-gradient-to-b
+    from-[#f3f3f3]/90
+    via-[#f3f3f3]/50
+    to-transparent
+    z-10
+  "
+/>{/* Bottom Fog */}
+<div
+  className="
+    pointer-events-none
+    absolute
+    bottom-0
+    left-0
+    right-0
+    h-44
+    bg-gradient-to-t
+    from-[#f3f3f3]/90
+    via-[#f3f3f3]/50
+    to-transparent
+    z-10
+  "
+/>
+          {/* Images */}
+          <div className="relative w-90 h-60 mt-30 rounded-2xl overflow-hidden shadow-md">
+            <Image src="/about/hero-left.jpg" alt="" fill className="object-cover" />
           </div>
 
-          {/* Center Main */}
-          <div className="relative w-60 h-72 mt-5 rounded-lg overflow-hidden">
-            <Image
-              src="/about/hero-main.jpg"
-              alt=""
-              fill
-              className="object-cover"
-            />
+          <div className="relative w-60 h-72 mt-5 rounded-2xl overflow-hidden shadow-md">
+            <Image src="/about/hero-main.jpg" alt="" fill className="object-cover" />
           </div>
 
-          {/* Right Column */}
           <div className="flex flex-col gap-4">
-
-            {/* Square */}
-            <div className="relative w-36 h-36 mt-5 rounded-lg overflow-hidden">
-              <Image
-                src="/about/hero-square.jpg"
-                alt=""
-                fill
-                className="object-cover"
-              />
+            <div className="relative w-36 h-36 mt-5 rounded-2xl overflow-hidden shadow-md">
+              <Image src="/about/hero-square.jpg" alt="" fill className="object-cover" />
             </div>
 
-            {/* Right Tall */}
-            <div className="relative w-44 h-60 rounded-lg overflow-hidden opacity-70">
-              <Image
-                src="/about/hero-right.jpg"
-                alt=""
-                fill
-                className="object-cover"
-              />
+            <div className="relative w-44 h-60 rounded-2xl overflow-hidden shadow-md brightness-95">
+              <Image src="/about/hero-right.jpg" alt="" fill className="object-cover" />
             </div>
-
           </div>
 
         </div>
@@ -90,4 +144,3 @@ export default function HeroSection() {
     </section>
   )
 }
-
