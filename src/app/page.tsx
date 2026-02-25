@@ -77,7 +77,7 @@ className="
       bg-clip-text
       text-transparent
     ">
-Shrey is a software engineering undergrad building end-to-end systems with layered architecture and optimized data flows, focused on maintainability, performance, and scalable design.
+Shrey is a Computer Science Engineering undergrad building end-to-end systems with layered architecture and optimized data flows, focused on maintainability, performance, and scalable design.
     </h1>
   </div>
 
@@ -137,6 +137,16 @@ Shrey is a software engineering undergrad building end-to-end systems with layer
             image="/images/musings.png"
             href="/work/aegis"
             variant="medium"
+          />
+
+
+          <ProductCard
+            title="DotBotics Pvt Ltd"
+            subtitle="SDE Intern"
+            year="2025"
+            image="/experience/intern1.png"
+            href="/experience/intern1"
+            variant="square"
           />
 
         </div>

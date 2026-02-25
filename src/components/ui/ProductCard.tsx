@@ -30,7 +30,7 @@ const aspectClass =
     : "aspect-[4/5]";
 
   const CardInner = (
-<div className={`group ${variant === "square" ? "w-[65%]" : "w-full"}`}>
+<div className={`group ${variant === "square" ? "max-w-[420px] w-full" : "w-full"}`}>
 
       {/* Image Frame */}
       <div

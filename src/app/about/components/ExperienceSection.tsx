@@ -25,7 +25,7 @@ export default function ExperienceSection() {
 
       {/* Cards */}
       <div className="px-10 lg:px-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
           <ProductCard
             title="DotBotics Pvt Ltd"
@@ -34,8 +34,7 @@ export default function ExperienceSection() {
             image="/experience/intern1.png"
             href="/experience/intern1"
             variant="square"
-          />
-
+          />          
 
 
         </div>
