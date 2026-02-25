@@ -101,7 +101,7 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             subtitle="Minimal Music App"
             year="2023-2024"
             image="/images/musings.png"
-            href="/work/musings"
+            href="/projects/musings"
             variant="tall"
           />
 
@@ -111,7 +111,7 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             subtitle="Web Platform"
             year="2026"
             image="/images/pagex.png"
-            href="/work/pagex"
+            href="/projects/pagex"
             variant="wide"
           />
 
@@ -119,26 +119,6 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
 
         {/* COLUMN 2 */}
         <div className="flex flex-col gap-3">
-
-          <ProductCard
-            title="Vaaya"
-            subtitle="Web Platform"
-            year="2025-2026"
-            image="/images/vaaya.png"
-            href="/work/vaaya"
-            variant="wide"
-          />
-
-
-            <ProductCard
-            title="Aegis"
-            subtitle="Web/Mobile Platform"
-            year="2025"
-            image="/images/musings.png"
-            href="/work/aegis"
-            variant="medium"
-          />
-
 
           <ProductCard
             title="DotBotics Pvt Ltd"
@@ -149,25 +129,36 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             variant="square"
           />
 
+            <ProductCard
+            title="Aegis"
+            subtitle="Web/Mobile Platform"
+            year="2025"
+            image="/images/musings.png"
+            href="/projects/aegis"
+            variant="medium"
+          />
+
+
+
         </div>
 
         {/* COLUMN 3 */}
         <div className="flex flex-col gap-3">
 
-     <ProductCard
-            title="Aegis"
-            subtitle="Web/Mobile Platform"
-            year="2025"
-            image="/images/musings.png"
-            href="/work/aegis"
-            variant="medium"
+          <ProductCard
+            title="Vaaya"
+            subtitle="Web Platform"
+            year="2025-2026"
+            image="/images/vaaya.png"
+            href="/projects/vaaya"
+            variant="wide"
           />
      <ProductCard
             title="Aegis"
             subtitle="Web/Mobile Platform"
             year="2025"
             image="/images/musings.png"
-            href="/work/aegis"
+            href="/projects/aegis"
             variant="tall"
           />
         </div>

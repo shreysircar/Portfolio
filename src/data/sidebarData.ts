@@ -17,15 +17,15 @@ export const sections: {
   {
     title: "MOBILE APPS",
     items: [
-      { label: "Musings", href: "/work/musings" },
-      { label: "Aegis", href: "/work/aegis" },
+      { label: "Musings", href: "/projects/musings" },
+      { label: "Aegis", href: "/projects/aegis" },
     ],
   },
   {
     title: "WEB APPS / WEBSITES",
     items: [
-      { label: "Vaaya", href: "/work/vaaya" },
-      { label: "PageX", href: "/work/pagex" },
+      { label: "Vaaya", href: "/projects/vaaya" },
+      { label: "PageX", href: "/projects/pagex" },
     ],
   },
   {
