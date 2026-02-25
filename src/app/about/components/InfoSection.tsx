@@ -3,44 +3,61 @@ import Image from "next/image"
 
 export default function InfoSection() {
   return (
-    <section className="px-10 lg:px-24 pt-10 pb-24 bg-[#F3F3F3]">
+    <section className="px-10 lg:px-24 pt-20 pb-24 bg-[#F3F3F3]">
 <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 items-start">
 
         {/* LEFT IMAGE PAIR */}
 <div className="relative flex gap-4 items-start pt-10">
 
           {/* Fog - Top */}
-          <div className="pointer-events-none absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#F3F3F3]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#F3F3F3]/70 to-transparent z-10" />
 
           {/* Fog - Bottom */}
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F3F3F3]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F3F3F3]/50 to-transparent z-10" />
 
           {/* Fog - Left */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F3F3F3]/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F3F3F3]/40 to-transparent z-10" />
 
           {/* Fog - Right */}
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F3F3F3]/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F3F3F3]/20 to-transparent z-10" />
 
-{/* Square Image + Caption */}
-<div className="flex flex-col items-start -mt-6">
-  <div className="relative w-[150px] h-[150px] rounded-lg overflow-hidden shadow-md">
-    <Image
-      src="/about/craft.jpg"
-      alt="Design and system thinking"
-      fill
-      className="object-cover"
-    />
+{/* Square Image Stack */}
+<div className="flex flex-col items-start -mt-6 space-y-6">
+
+  {/* First Image */}
+  <div>
+    <div className="relative w-[150px] h-[150px] rounded-lg overflow-hidden shadow-md">
+      <Image
+        src="/about/clean.png"
+        alt="Design and system thinking"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+    <span className="mt-3 ml-12 block text-[11px] text-neutral-400 tracking-wide">
+      Craft & structure.
+    </span>
   </div>
 
-<span className="mt-3 ml-12 text-[11px] text-neutral-400 tracking-wide">
-    Craft & structure.
-  </span>
+  {/* Second Same-Sized Image */}
+  <div>
+    <div className="relative w-[150px] h-[120px] rounded-lg overflow-hidden shadow-md">
+      <Image
+        src="/about/codec.png"  // <-- change to your new image path
+        alt=""
+        fill
+        className="object-cover"
+      />
+    </div>
+  </div>
+
 </div>
 
 {/* Tall Image (no offset) */}
 <div className="relative w-[200px] h-[280px] rounded-lg overflow-hidden shadow-md">
   <Image
-    src="/about/journey.jpg"
+    src="/about/setup.png"
     alt=""
     fill
     className="object-cover"
@@ -56,27 +73,19 @@ export default function InfoSection() {
 
           <div className="space-y-3 text-[12px] leading-[1.5] text-neutral-600">
             <p>
-              I build systems with clarity, structure, and intentional design.
+             I’m pursuing Computer Science with a growing focus on the systems beneath software.
             </p>
 
             <p>
-              My work focuses on scalable architecture, thoughtful interfaces,
-              and clean abstractions that improve how people interact with
-              digital products.
+             Over time, I’ve become drawn to architecture, modular boundaries, and the structure that sustains applications at scale.
             </p>
             <p>
-              My work focuses on scalable architecture, thoughtful interfaces,
-              and clean abstractions that improve how people interact with
-              digital products.
+             Through building production-grade platforms, I’ve learned that thoughtful abstractions and clean layering matter as much as features.
             </p>
             <p>
-              I care deeply about the intersection of performance, usability,
-              and aesthetics — creating software that feels considered.
+             I’m motivated by designing software that balances performance, clarity, and human experience — engineered with intention and discipline.
             </p>
-                        <p>
-              I care deeply about the intersection of performance, usability,
-              and aesthetics — creating software that feels considered.
-            </p>
+  
 
           </div>
         </div>

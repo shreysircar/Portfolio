@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function LifeSection() {
   return (
-<section className="px-10 lg:px-20 pt-5 pb-24 ">
+<section className="px-10 lg:px-24 pt-5 pb-24 ">
 <div className="mb-4">
   <div className="h-[1px] bg-neutral-200 w-[95%]" />
 </div>

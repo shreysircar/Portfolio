@@ -98,7 +98,7 @@ export default function HeroSection() {
     right-0
     h-44
     bg-gradient-to-b
-    from-[#f3f3f3]/90
+    from-[#f3f3f3]/60
     via-[#f3f3f3]/50
     to-transparent
     z-10
@@ -113,7 +113,7 @@ export default function HeroSection() {
     right-0
     h-44
     bg-gradient-to-t
-    from-[#f3f3f3]/90
+    from-[#f3f3f3]/60
     via-[#f3f3f3]/50
     to-transparent
     z-10
@@ -121,20 +121,20 @@ export default function HeroSection() {
 />
           {/* Images */}
           <div className="relative w-100 h-55 mt-20 rounded-lg overflow-hidden shadow-md">
-            <Image src="/about/hero-left.jpg" alt="" fill className="object-cover" />
+            <Image src="/about/hero-left.png" alt="" fill className="object-cover" />
           </div>
 
           <div className="relative w-100 h-60 mt-5 rounded-lg overflow-hidden shadow-md">
-            <Image src="/about/hero-main.jpg" alt="" fill className="object-cover" />
+            <Image src="/about/hero.jpeg" alt="" fill className="object-cover" />
           </div>
 
           <div className="flex flex-col gap-4">
             <div className="relative w-44 h-44 mt-0 rounded-lg overflow-hidden shadow-md">
-              <Image src="/about/hero-square.jpg" alt="" fill className="object-cover" />
+              <Image src="/about/court.jpg" alt="" fill className="object-cover" />
             </div>
 
             <div className="relative w-34 h-40 rounded-lg overflow-hidden shadow-md ">
-              <Image src="/about/hero-right.jpg" alt="" fill className="object-cover" />
+              <Image src="/about/hero-r.PNG" alt="" fill className="object-cover" />
             </div>
           </div>
 

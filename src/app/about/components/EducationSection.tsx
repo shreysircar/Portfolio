@@ -10,7 +10,7 @@ const [collegeOpen, setCollegeOpen] = useState(false);
 const [expanded, setExpanded] = useState(false);
 const [minimized, setMinimized] = useState(false);
   return (
-    <section className="mt-1 mb-20">
+    <section className="mt-1 mb-10">
 
       {/* Horizontal Rule */}
       <div className="px-10 lg:px-24 mb-4">
@@ -32,145 +32,104 @@ const [minimized, setMinimized] = useState(false);
       {/* Main Content Container */}
       <div className="px-10 lg:px-24 space-y-10">
 
-        {/* ================= SCHOOLING ================= */}
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+    {/* ================= SCHOOLING ================= */}
+<div className="flex justify-between items-start">
 
-          {/* Text Left */}
-<div className="flex justify-between items-start max-w-lg group">
+  <div className="flex justify-between items-start w-full max-w-lg group">
 
-  <div className="space-y-6">
-    <h2 className="
-      text-[22px] md:text-[24px] lg:text-[26px]
-      font-medium
-      leading-[1.2]
-      tracking-[-0.01em]
-    ">
-      Apeejay School, Noida
-    </h2>
+    <div className="space-y-3">
+      <h2 className="
+        text-[22px] md:text-[24px] lg:text-[26px]
+        font-medium
+        leading-[1.2]
+        tracking-[-0.01em]
+      ">
+        Apeejay School, Noida
+      </h2>
 
-    <p className="text-[16px] text-neutral-400 font-semibold">
-      Secondary & Senior Secondary Education
-    </p>
+      <p className="text-[16px] text-neutral-400 font-semibold">
+        Secondary & Senior Secondary Education
+      </p>
 
-<p className="text-[12px] text-neutral-600 leading-relaxed">
-      Early academic foundation rooted in mathematics, structured reasoning,
-      and analytical discipline. These formative years shaped systems thinking
-      and a strong problem-solving mindset.
-    </p>
+      <p className="text-[12px] text-neutral-600 leading-relaxed">
+        Early academic foundation rooted in mathematics, structured reasoning,
+        and analytical discipline. These formative years shaped systems thinking
+        and a strong problem-solving mindset.
+      </p>
+    </div>
+
+    <button
+      onClick={() => {
+        setSchoolOpen(true);
+        setMinimized(false);
+      }}
+      className="mt-1"
+    >
+      <ArrowUpRight
+        size={18}
+        strokeWidth={1.5}
+        className="
+          text-neutral-400
+          group-hover:text-neutral-700
+          transition-all
+          duration-300
+          group-hover:translate-x-1
+          group-hover:-translate-y-1
+        "
+      />
+    </button>
+
   </div>
-
-  <button
-    onClick={() => {
-      setSchoolOpen(true);
-      setMinimized(false);
-    }}
-    className="mt-1"
-  >
-    <ArrowUpRight
-      size={18}
-      strokeWidth={1.5}
-      className="
-        text-neutral-400
-        group-hover:text-neutral-700
-        transition-all
-        duration-300
-        group-hover:translate-x-1
-        group-hover:-translate-y-1
-      "
-    />
-  </button>
-          </div>
-
-          {/* Image Right */}
-          <div className="max-w-md">
-            <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden">
-              <Image
-                src="/about/school.jpg"
-                alt="School campus"
-                fill
-                className="object-cover scale-[1.02] brightness-[0.95]"
-              />
-{/* Softer Fog Overlay */}
-<div className="absolute inset-0 pointer-events-none">
-  <div className="absolute inset-0 bg-gradient-to-t from-[#F3F3F3]/60 via-transparent to-[#F3F3F3]/60" />
-  <div className="absolute inset-0 bg-gradient-to-r from-[#F3F3F3]/60 via-transparent to-[#F3F3F3]/60" />
 </div>
-</div>
-            <p className="mt-4 text-[12px] text-neutral-500">
-              School campus during graduation year
-            </p>
-          </div>
-        </div>
-
         {/* ================= COLLEGE ================= */}
-      <div className="grid lg:grid-cols-[auto_1fr] gap-15 items-start">
-          {/* Image Left */}
-          <div className="max-w-md">
-            <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden">
-              <Image
-                src="/about/college.png"
-                alt="College campus"
-                fill
-                className="object-cover scale-[1.02] brightness-[0.95]"
-              />
-{/* Softer Fog Overlay */}
-<div className="absolute inset-0 pointer-events-none">
-  <div className="absolute inset-0 bg-gradient-to-t from-[#F3F3F3]/60 via-transparent to-[#F3F3F3]/60" />
-  <div className="absolute inset-0 bg-gradient-to-r from-[#F3F3F3]/60 via-transparent to-[#F3F3F3]/60" />
-</div>
-            </div>
+<div className="mt-16 flex justify-between items-start">
 
-            <p className="mt-4 text-[12px] text-neutral-500">
-              University campus 
-            </p>
-          </div>
+  <div className="flex justify-between items-start w-full max-w-lg group">
 
-          {/* Text Right */}
-<div className="flex justify-between items-start w-full group">
+    <div className="space-y-3">
+      <h2 className="
+        text-[22px] md:text-[24px] lg:text-[26px]
+        font-medium
+        leading-[1.2]
+        tracking-[-0.01em]
+      ">
+        Jaypee Institute Of Information Technology, Noida
+      </h2>
 
-  <div className="space-y-6">
-    <h2 className="
-      text-[22px] md:text-[24px] lg:text-[26px]
-      font-medium
-      leading-[1.2]
-      tracking-[-0.01em]
-    ">
-      Jaypee Institute Of Information Technology, Noida
-    </h2>
+      <p className="text-[16px] text-neutral-400 font-semibold">
+        B.Tech in Computer Science
+      </p>
 
-    <p className="text-[15px] text-neutral-400 font-semibold">
-      B.Tech in Computer Science
-    </p>
-<p className="text-[12px] text-neutral-600 leading-relaxed">
-      Currently pursuing undergraduate studies with emphasis on
-      software engineering, distributed systems, scalable backend
-      design, and production-grade architecture across layered systems.
-    </p>
+      <p className="text-[12px] text-neutral-600 leading-relaxed">
+        Currently pursuing undergraduate studies with emphasis on
+        software engineering, distributed systems, scalable backend
+        design, and production-grade architecture across layered systems.
+      </p>
+    </div>
+
+    <button
+      onClick={() => {
+        setCollegeOpen(true);
+        setMinimized(false);
+      }}
+      className="mt-1"
+    >
+      <ArrowUpRight
+        size={18}
+        strokeWidth={1.5}
+        className="
+          text-neutral-400
+          group-hover:text-neutral-700
+          transition-all
+          duration-300
+          group-hover:translate-x-1
+          group-hover:-translate-y-1
+        "
+      />
+    </button>
+
   </div>
-
-  <button
-    onClick={() => {
-      setCollegeOpen(true);
-      setMinimized(false);
-    }}
-    className="mt-1"
-  >
-    <ArrowUpRight
-      size={18}
-      strokeWidth={1.5}
-      className="
-        text-neutral-400
-        group-hover:text-neutral-700
-        transition-all
-        duration-300
-        group-hover:translate-x-1
-        group-hover:-translate-y-1
-      "
-    />
-  </button>
-          </div>
-        </div>
-
+</div>
       </div>
       {/* School Modal */}
 <MacModal
@@ -215,12 +174,14 @@ const [minimized, setMinimized] = useState(false);
   <div className="space-y-4 text-[14px] leading-relaxed">
 <p><b>Bachelor of Technology — Computer Science & Engineering</b></p>
 
-<p>Focused on data structures, algorithms, operating systems, databases, and computer networks — building a strong systems-oriented foundation.</p>
+<p><b>Focused on:</b> Data structures, algorithms, operating systems, databases, and computer networks — building a strong systems-oriented foundation.</p>
 
 <p>Applied concepts through scalable full-stack projects, backend architecture design, and structured problem solving.</p>
 
-<p><b>Systems Design:</b> Exposure to LLD and HLD principles, modular architecture, API design, and performance-oriented development.</p>
+<p>Engaged in freelance development work and participated in multiple competitive hackathons, including Smart India Hackathon (SIH), working on rapid prototyping, collaborative system design, and real-world problem statements.</p>
 
+<p><b>Systems Design:</b> Exposure to LLD and HLD principles, modular architecture, API design, and performance-oriented development.</p>
+<p><b>Leadership & Societies:</b> Social Media and PR Head at Eloquence (Literary Society) (2023–Present); Member of Ffortissimo (Music Society) (2023–2024).</p>
 <p>Internship experience translating theory into production-ready engineering practices.</p>
   </div>
 </MacModal>
