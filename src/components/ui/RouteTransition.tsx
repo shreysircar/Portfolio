@@ -15,6 +15,7 @@ export default function RouteTransition({
   return (
     <AnimatePresence mode="wait">
       <motion.div
+      className="relative z-0"
         key={pathname}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

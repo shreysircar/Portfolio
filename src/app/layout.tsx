@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Sidebar />
 
-<main className="ml-[165px] w-[calc(100%-165px)]">
+<main className="ml-[165px] relative z-0">
           <div className="px-6">
             <RouteTransition>
               {children}

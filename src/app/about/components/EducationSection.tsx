@@ -45,11 +45,11 @@ const [minimized, setMinimized] = useState(false);
       leading-[1.2]
       tracking-[-0.01em]
     ">
-      Your School Name
+      Apeejay School, Noida
     </h2>
 
-    <p className="text-[15px] text-neutral-400 font-semibold">
-      Senior Secondary Education
+    <p className="text-[16px] text-neutral-400 font-semibold">
+      Secondary & Senior Secondary Education
     </p>
 
 <p className="text-[12px] text-neutral-600 leading-relaxed">
@@ -135,7 +135,7 @@ const [minimized, setMinimized] = useState(false);
       leading-[1.2]
       tracking-[-0.01em]
     ">
-      Your College Name
+      Jaypee Institute Of Information Technology, Noida
     </h2>
 
     <p className="text-[15px] text-neutral-400 font-semibold">
@@ -175,7 +175,7 @@ const [minimized, setMinimized] = useState(false);
       {/* School Modal */}
 <MacModal
   isOpen={schoolOpen && !minimized}
-  title="Your School Name"
+  title="Apeejay School, Noida"
   expanded={expanded}
   onClose={() => {
     setSchoolOpen(false);
@@ -185,15 +185,25 @@ const [minimized, setMinimized] = useState(false);
   onExpand={() => setExpanded(!expanded)}
 >
   <div className="space-y-4 text-[14px] leading-relaxed">
-    <p>Academic highlights, leadership roles, achievements.</p>
-    <p>Key subjects and foundational growth years.</p>
+<p>Schooling | PCMB | CBSE</p>
+
+<p><b>Class X:</b> 96.6%</p>
+<p><b>Class XII:</b> 92.2%</p>
+<p><b>Scholar Badge Awardee(Grade 6–12):</b> Sustained academic distinction</p>
+
+<p><b>Leadership:</b> Prefectorial Board — School Prefect & House Prefect. Led student coordination, discipline oversight, and formal representation.</p>
+
+<p><b>Sports:</b> Lawn Tennis, Football</p>
+
+<p><b>Music:</b> Best Vocalist (2×), multiple competition wins</p>
+
   </div>
 </MacModal>
 
 {/* College Modal */}
 <MacModal
   isOpen={collegeOpen && !minimized}
-  title="Your College Name"
+  title="Jaypee Institute Of Information Technology, Noida"
   expanded={expanded}
   onClose={() => {
     setCollegeOpen(false);
@@ -203,8 +213,15 @@ const [minimized, setMinimized] = useState(false);
   onExpand={() => setExpanded(!expanded)}
 >
   <div className="space-y-4 text-[14px] leading-relaxed">
-    <p>Coursework, projects, internships.</p>
-    <p>System design focus and technical specialization.</p>
+<p><b>Bachelor of Technology — Computer Science & Engineering</b></p>
+
+<p>Focused on data structures, algorithms, operating systems, databases, and computer networks — building a strong systems-oriented foundation.</p>
+
+<p>Applied concepts through scalable full-stack projects, backend architecture design, and structured problem solving.</p>
+
+<p><b>Systems Design:</b> Exposure to LLD and HLD principles, modular architecture, API design, and performance-oriented development.</p>
+
+<p>Internship experience translating theory into production-ready engineering practices.</p>
   </div>
 </MacModal>
 

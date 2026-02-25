@@ -5,8 +5,7 @@ html {
 }
 
 body {
-  background: #F3F3F3;   /* not pure white */
-  color: #2C2C2C;        /* not pure black */
+  background: #F3F3F3;
   font-feature-settings: "ss01" on;
 }
 
@@ -14,9 +13,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: inherit;
-}
 
 * {
   -webkit-tap-highlight-color: transparent;

@@ -7,6 +7,7 @@ export default function Sidebar() {
     fixed
     left-0
     top-0
+    z-[9999]
     w-[165px]
     h-screen
     shrink-0
@@ -29,16 +30,27 @@ export default function Sidebar() {
 
         {/* PRIMARY NAV */}
 <nav className="space-y-[4px] text-[15px]">
-  {primaryNav.map((item) => (
-    <a
-      key={item.label}
-      href={item.href}
-      download={item.href.endsWith(".pdf")}
-      className="block no-underline font-semibold tracking-[-0.01em] text-[#2C2C2C] hover:text-neutral-400 transition-colors duration-150"
-    >
-      {item.label}
-    </a>
-  ))}
+  {primaryNav.map((item) => {
+    const isExternal = item.href.startsWith("http") || item.href.startsWith("mailto:");
+
+    return isExternal ? (
+      <a
+        key={item.label}
+        href={item.href}
+        className="block font-semibold tracking-[-0.01em] text-neutral-800 hover:text-neutral-400 transition-colors duration-150"
+      >
+        {item.label}
+      </a>
+    ) : (
+      <Link
+        key={item.label}
+        href={item.href}
+        className="block font-semibold tracking-[-0.01em] text-neutral-800 hover:text-neutral-400 transition-colors duration-150"
+      >
+        {item.label}
+      </Link>
+    );
+  })}
 </nav>
 
         {/* DIVIDER */}
@@ -53,18 +65,29 @@ export default function Sidebar() {
             </div>
 
 <div className="space-y-[4px] text-[9.5px]">
-{section.items.map((item) => (
-  <a
-    key={item.label}
-    href={item.href}
-    target={item.external ? "_blank" : undefined}
-    rel={item.external ? "noopener noreferrer" : undefined}
-    download={item.href.endsWith(".pdf")}
-    className="block no-underline tracking-[-0.01em] text-[#2C2C2C] hover:text-neutral-400 transition-colors duration-150"
-  >
-    {item.label}
-  </a>
-))}
+{section.items.map((item) => {
+  const isExternal = item.external;
+
+  return isExternal ? (
+    <a
+      key={item.label}
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block tracking-[-0.01em] text-neutral-800 hover:text-neutral-400 transition-colors duration-150"
+    >
+      {item.label}
+    </a>
+  ) : (
+    <Link
+      key={item.label}
+      href={item.href}
+      className="block tracking-[-0.01em] text-neutral-800 hover:text-neutral-400 transition-colors duration-150"
+    >
+      {item.label}
+    </Link>
+  );
+})}
 </div>
 
             {/* Add divider between sections except last */}
