@@ -104,7 +104,7 @@ export default function LifeSection() {
     <div className="flex justify-end">
        <div className="relative w-[75%] aspect-[5/4] rounded-xl overflow-hidden">
       <Image
-        src="/about/random.png"
+        src="/about/random.jpg"
         alt="Random moment"
         fill
         className="object-cover"
