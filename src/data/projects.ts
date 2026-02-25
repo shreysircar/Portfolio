@@ -251,4 +251,71 @@ export const projects: Project[] = [
       "Improved discipline in component isolation design.",
     ],
   },
+  {
+  slug: "fluxnav",
+  title: "FluxNav",
+  tagline:
+    "Graph-powered metro navigation engine built for optimal route computation and real-world scalability.",
+
+  hero: {
+    colors: ["#f59e0b", "#b45309", "#0f172a"],
+    desktopImage: "/projects/fluxnav/desktop.png",
+    mobileImage: "/projects/fluxnav/mobile.png",
+  },
+
+  overview:
+    "FluxNav is a cross-platform Flutter application engineered to compute optimal Delhi Metro routes using graph algorithms. It models metro stations as nodes and connections as weighted edges, enabling shortest path computation, minimum interchange routing, and location-aware station discovery via Google Maps integration.",
+
+  architecture: {
+    hldImage: "/projects/fluxnav/hld.png",
+    lldImage: "/projects/fluxnav/lld.png",
+  },
+
+  features: [
+    {
+      title: "Shortest Route Engine (Dijkstra)",
+      description:
+        "PriorityQueue-optimized Dijkstra implementation to compute minimum distance paths across weighted metro graphs.",
+    },
+    {
+      title: "Minimum Interchange Path",
+      description:
+        "Custom graph traversal leveraging edge metadata (line color + distance) to minimize interchange transitions.",
+    },
+    {
+      title: "Nearby Station Discovery",
+      description:
+        "Integrated Google Maps and Places API to detect and display nearby metro stations in real-time.",
+    },
+    {
+      title: "Dual Route Output",
+      description:
+        "Returns optimized paths based on both shortest distance and least interchanges for user flexibility.",
+    },
+  ],
+
+  scalability: [
+    "Custom graph data structures for efficient node-edge lookup",
+    "PriorityQueue optimization for reduced path computation time",
+    "Separation of UI and algorithmic logic for maintainability",
+    "Modular API layer for location services integration",
+  ],
+
+  challenges: [
+    "Handling interchange logic without inflating graph complexity",
+    "Balancing algorithm efficiency with real-time UI responsiveness",
+    "Managing dynamic route rendering on map overlays",
+  ],
+
+  tradeoffs: [
+    "Chose custom graph implementation over third-party libraries for full control.",
+    "Accepted slightly higher memory usage to maintain dual-route computation capability.",
+  ],
+
+  learnings: [
+    "Deepened understanding of applied graph algorithms in real-world systems.",
+    "Strengthened architectural thinking in separating core logic from UI layers.",
+    "Improved performance tuning using Dart collections and priority queues.",
+  ],
+},
 ];

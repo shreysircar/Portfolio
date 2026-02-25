@@ -19,6 +19,7 @@ export const sections: {
     items: [
       { label: "Musings", href: "/projects/musings" },
       { label: "Aegis", href: "/projects/aegis" },
+      { label: "FluxNav", href: "/projects/fluxnav"}
     ],
   },
   {
