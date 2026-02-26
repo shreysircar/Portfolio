@@ -132,8 +132,8 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             subtitle="Web Platform"
             year="2025-2026"
             media={{
-  type: "image",
-  src: "/images/vaaya.png",
+  type: "video",
+  src: "/projects/vaaya/vaaya.mp4",
 }}
 
             href="/projects/vaaya"
@@ -172,14 +172,14 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
       
      <ProductCard
             title="FluxNav"
-            subtitle="Mobile Platform"
+            subtitle="Mobile App"
             year="2025"
                         media={{
   type: "image",
-  src: "/images/musings.png",
+  src: "/images/flux.png",
 }}
             href="/projects/fluxnav"
-            variant="wide"
+            variant="square"
           />
         </div>
 
