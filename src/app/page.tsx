@@ -99,7 +99,10 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             title="DotBotics Pvt Ltd"
             subtitle="SDE Intern"
             year="2025"
-            image="/experience/intern1.png"
+            media={{
+  type: "image",
+  src: "/experience/intern1.png",
+}}
             href="/experience/intern1"
             variant="square"
           />
@@ -108,7 +111,10 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             title="Aegis"
             subtitle="Web/Mobile Platform"
             year="2025"
-            image="/images/musings.png"
+            media={{
+  type: "image",
+  src: "/images/musings.png",
+}}
             href="/projects/aegis"
             variant="medium"
           />
@@ -125,7 +131,11 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             title="Vaaya"
             subtitle="Web Platform"
             year="2025-2026"
-            image="/images/vaaya.png"
+            media={{
+  type: "image",
+  src: "/images/vaaya.png",
+}}
+
             href="/projects/vaaya"
             variant="wide"
           />
@@ -134,9 +144,12 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             title="Musings"
             subtitle="Minimal Music App"
             year="2023-2024"
-            image="/images/musings.png"
+            media={{
+  type: "video",
+  src: "/projects/musings/musingslaunch.mp4",
+}}
             href="/projects/musings"
-            variant="medium"
+                      variant="medium"
           />
 
         </div>
@@ -148,7 +161,10 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             title="Pagex"
             subtitle="Web Platform"
             year="2026"
-            image="/images/pagex.png"
+                        media={{
+  type: "image",
+  src: "/images/pagex.png",
+}}
             href="/projects/pagex"
             variant="tall"
           />
@@ -158,7 +174,10 @@ Shrey is a Computer Science Engineering undergrad building end-to-end systems wi
             title="FluxNav"
             subtitle="Mobile Platform"
             year="2025"
-            image="/images/musings.png"
+                        media={{
+  type: "image",
+  src: "/images/musings.png",
+}}
             href="/projects/fluxnav"
             variant="wide"
           />

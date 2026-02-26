@@ -31,7 +31,11 @@ export default function ExperienceSection() {
             title="DotBotics Pvt Ltd"
             subtitle="SDE Intern"
             year="2025"
-            image="/experience/intern1.png"
+                        media={{
+  type: "image",
+  src: "/experience/intern1.png",
+}}
+
             href="/experience/intern1"
             variant="square"
           />          

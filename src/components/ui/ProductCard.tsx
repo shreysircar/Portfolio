@@ -5,7 +5,10 @@ type ProductCardProps = {
   title: string;
   subtitle: string;
   year: string;
-  image: string;
+media: {
+  type: "image" | "video";
+  src: string;
+};
   href?: string;
   variant?: "tall" | "medium" | "wide" | "square";
 };
@@ -14,7 +17,7 @@ export default function ProductCard({
   title,
   subtitle,
   year,
-  image,
+  media,
   href,
   variant = "medium",
 }: ProductCardProps) {
@@ -47,12 +50,24 @@ className={`
   group-hover:shadow-[0_18px_45px_rgba(0,0,0,0.12)]
 `}
       >
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-contain"
-        />
+{media.type === "image" ? (
+  <Image
+    src={media.src}
+    alt={title}
+    fill
+    className="object-contain"
+  />
+) : (
+<video
+  src={media.src}
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
+)}
       </div>
 
 {/* Typography */}
