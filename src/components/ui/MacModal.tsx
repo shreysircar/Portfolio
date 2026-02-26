@@ -1,6 +1,6 @@
 "use client";
 import { X, Minus, ArrowUpLeft, ArrowDownRight} from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 
@@ -32,6 +32,14 @@ export default function MacModal({
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
+  
+  const [mounted, setMounted] = useState(false);
+
+useEffect(() => {
+  setMounted(true);
+}, []);
+
+if (!mounted) return null;
 
 return createPortal(
   <AnimatePresence>
