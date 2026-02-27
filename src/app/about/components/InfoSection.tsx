@@ -42,7 +42,7 @@ export default function InfoSection() {
 
   {/* Second Same-Sized Image */}
   <div>
-    <div className="relative w-[150px] h-[120px] rounded-lg overflow-hidden shadow-md">
+    <div className="relative w-[150px] h-[140px] rounded-lg overflow-hidden shadow-md">
       <Image
         src="/about/codec.png"  // <-- change to your new image path
         alt=""

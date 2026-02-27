@@ -77,7 +77,7 @@ className="
       bg-clip-text
       text-transparent
     ">
-Shrey is a Computer Science Engineering undergrad building end-to-end systems with layered architecture and optimized data flows, focused on maintainability, performance, and scalable design.
+I'm a Computer Science Engineering undergrad building end-to-end systems with layered architecture and optimized data flows, focused on maintainability, performance, and scalable design.
     </h1>
   </div>
 
