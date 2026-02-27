@@ -46,24 +46,33 @@ return createPortal(
     {isOpen && (
       <>
         {/* Backdrop */}
-        <motion.div
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[9998]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
+<motion.div
+  className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[9998]"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+/>
 
         {/* Window */}
-        <motion.div
-          className={`fixed z-[9999] bg-white rounded-xl shadow-[0_40px_120px_rgba(0,0,0,0.25)]
-          ${expanded ? "w-[90vw] h-[85vh]" : "w-[700px] h-[500px]"}
-          top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          flex flex-col overflow-hidden`}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.25 }}
-        >
+<motion.div
+layout
+  className={`fixed z-[9999] bg-white rounded-xl shadow-[0_40px_120px_rgba(0,0,0,0.25)]
+  ${expanded ? "w-[82vw] h-[85vh]" : "w-[700px] h-[500px]"}
+  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  flex flex-col overflow-hidden`}
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+exit={{ opacity: 0 }}
+transition={{
+  layout: {
+    type: "spring",
+    stiffness: 240,
+    damping: 30
+  },
+  opacity: { duration: 0.18 }
+}}
+>
 
           {/* Top Bar */}
           <div className="h-10 flex items-center px-4 bg-neutral-100 border-b border-neutral-200">

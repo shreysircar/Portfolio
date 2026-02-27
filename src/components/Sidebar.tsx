@@ -34,8 +34,10 @@ sticky top-0
 <div
   className={`
     pt-[52px] pl-[24px] pr-3 space-y-[12px] pb-5
-    transition-opacity duration-300 ease-out
-    ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
+    transition-opacity duration-200 ease-out
+    ${isOpen
+      ? "opacity-100 delay-300"
+      : "opacity-0 pointer-events-none"}
   `}
 >
 
