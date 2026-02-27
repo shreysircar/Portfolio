@@ -1,10 +1,14 @@
 "use client";
 import { primaryNav, sections } from "@/data/sidebarData";
 import Link from "next/link";
-import { useState } from "react";
 import { PanelLeft } from "lucide-react";
-export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
+type SidebarProps = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
+
   return (
 <aside
   className={`
@@ -12,13 +16,13 @@ export default function Sidebar() {
     left-0
     top-0
     z-[9999]
-    ${isOpen ? "w-[165px]" : "w-[40px]"}
+    ${isOpen ? "w-[165px]" : "w-[50px]"}
     h-screen
     shrink-0
     bg-white
     border-r border-[#E6E6E4]
     overflow-hidden
-    transition-all duration-300
+    transition-[width] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
   `}
   
 >
