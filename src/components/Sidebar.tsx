@@ -12,9 +12,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   return (
 <aside
   className={`
-    fixed
-    left-0
-    top-0
+sticky top-0
     z-[9999]
     ${isOpen ? "w-[165px]" : "w-[50px]"}
     h-screen
@@ -33,8 +31,13 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
 >
   <PanelLeft size={18} strokeWidth={1.8} />
 </button>
-{isOpen && (
-  <div className="pt-[52px] pl-[24px] pr-3 space-y-[12px] pb-5">
+<div
+  className={`
+    pt-[52px] pl-[24px] pr-3 space-y-[12px] pb-5
+    transition-opacity duration-300 ease-out
+    ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
+  `}
+>
 
         {/* LOGO */}
 <Link href="/" className="block w-fit">
@@ -116,7 +119,6 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         ))}
 
   </div>
-)}
     </aside>
   );
 }

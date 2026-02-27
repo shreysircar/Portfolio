@@ -21,38 +21,22 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-  <body className={inter.className}>
-<Sidebar
-  isOpen={isSidebarOpen}
-  setIsOpen={setIsSidebarOpen}
-/>
+<body className={`${inter.className} flex overflow-x-hidden`}>
 
-<div className="relative">
-  {/* Spacer that matches sidebar width */}
-  <div
-    className={`
-      fixed top-0 left-0 h-screen
-      transition-[width] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
-      ${isSidebarOpen ? "w-[165px]" : "w-[40px]"}
-    `}
+  <Sidebar
+    isOpen={isSidebarOpen}
+    setIsOpen={setIsSidebarOpen}
   />
 
-  <main className="relative">
-    <div
-      className={`
-        w-full max-w-5xl mx-auto px-6
-        transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
-        ${isSidebarOpen ? "translate-x-[165px]" : "translate-x-[40px]"}
-      `}
-    >
+  <main className="flex-1">
+    <div className="w-full max-w-5xl mx-auto px-6">
       <RouteTransition>
         {children}
       </RouteTransition>
     </div>
   </main>
-</div>
 
-      </body>
+</body>
     </html>
   );
 }
