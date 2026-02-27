@@ -275,9 +275,9 @@ className="
   font-semibold
   tracking-[-0.01em]
   bg-gradient-to-r
-  from-neutral-400
+  from-neutral-200
   via-neutral-500
-  to-neutral-800
+  to-neutral-900
   bg-clip-text
   text-transparent
 "

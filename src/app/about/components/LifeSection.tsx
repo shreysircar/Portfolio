@@ -44,7 +44,7 @@ export default function LifeSection() {
 </p>
 
 <p>
-  I also play lawn tennis and football, and follows the game closely as an FC Barcelona supporter — experiences that reinforce discipline, rhythm, and focus beyond engineering.
+  I also play lawn tennis and football, and follow the game closely as an FC Barcelona supporter — experiences that reinforce discipline, rhythm, and focus beyond engineering.
 </p>
 
 
