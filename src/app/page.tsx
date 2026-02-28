@@ -162,11 +162,11 @@ I'm a Computer Science Engineering undergrad building end-to-end systems with la
             subtitle="Web Platform"
             year="2026"
                         media={{
-  type: "image",
-  src: "/images/pagex.png",
+  type: "video",
+  src: "/projects/pagex/pagex.mp4",
 }}
             href="/projects/pagex"
-            variant="tall"
+            variant="square"
           />
 
       
