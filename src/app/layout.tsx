@@ -6,6 +6,13 @@ import Sidebar from "@/components/Sidebar";
 import RouteTransition from "@/components/ui/RouteTransition";
 import { useState } from "react";
 
+export const metadata = {
+  title: "Shrey | Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
