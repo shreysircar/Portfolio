@@ -1,9 +1,12 @@
 // src/data/projects.ts
 
+export type ProjectLevel = "small" | "medium" | "flagship";
+
 export type Project = {
   slug: string;
   title: string;
   tagline: string;
+  level: ProjectLevel
 
 hero: {
   colors: string[]; // 2 or 3 colors
@@ -39,7 +42,7 @@ export const projects: Project[] = [
     title: "Vaaya",
     tagline:
       "AI-driven conversational system engineered for scalable context retention.",
-
+    level: "flagship",
     hero: {
     colors: ["#0ea5e9", "#2563eb", "#0f172a"],
 
@@ -95,6 +98,7 @@ export const projects: Project[] = [
     title: "Aegis",
     tagline:
       "Secure authentication and access control system built with role-based logic.",
+    level: "medium",
 
     hero: {
   colors: ["#10b981", "#065f46", "#111827"],
@@ -149,7 +153,7 @@ export const projects: Project[] = [
     title: "Musings",
     tagline:
       "Minimal publishing platform focused on structured content rendering.",
-
+    level: "small",
     hero: {
   colors: ["#a78bfa", "#6366f1", "#1e293b"],
       desktopImage: "/projects/musings/desktop.png",
@@ -203,7 +207,7 @@ export const projects: Project[] = [
     title: "PageX",
     tagline:
       "Component-driven frontend system engineered for modular scalability.",
-
+    level: "flagship",
     hero: {
   colors: ["#06b6d4", "#0ea5e9", "#0b1120"],
       desktopImage: "/projects/pagex/desktop.png",
@@ -256,7 +260,7 @@ export const projects: Project[] = [
   title: "FluxNav",
   tagline:
     "Graph-powered metro navigation engine built for optimal route computation and real-world scalability.",
-
+    level: "small",
   hero: {
     colors: ["#f59e0b", "#b45309", "#0f172a"],
     desktopImage: "/projects/fluxnav/desktop.png",
