@@ -12,6 +12,7 @@ hero: {
   colors: string[]; // 2 or 3 colors
   desktopImage?: string;
   mobileImage?: string;
+  video?: string; 
 };
 
   overview: string;
@@ -43,12 +44,10 @@ export const projects: Project[] = [
     tagline:
       "AI-driven conversational system engineered for scalable context retention.",
     level: "flagship",
-    hero: {
-    colors: ["#0ea5e9", "#2563eb", "#0f172a"],
-
-      desktopImage: "/projects/vaaya/desktop.png",
-      mobileImage: "/projects/vaaya/mobile.png",
-    },
+hero: {
+  colors: ["#0ea5e9", "#2563eb", "#0f172a"],
+  video: "/projects/vaaya/hero.mp4",
+},
 
     overview:
       "Vaaya is a conversational platform designed to maintain contextual continuity across sessions while ensuring scalability, modular API layers, and optimized token usage.",

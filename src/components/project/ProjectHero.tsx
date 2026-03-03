@@ -5,6 +5,7 @@ type HeroProps = {
     colors: string[];
     desktopImage?: string;
     mobileImage?: string;
+    video?: string; // NEW
   };
 };
 
@@ -14,6 +15,7 @@ export default function ProjectHero({ hero }: HeroProps) {
   const hasDesktop = !!hero.desktopImage;
   const hasMobile = !!hero.mobileImage;
   const hasBoth = hasDesktop && hasMobile;
+  const hasVideo = !!hero.video;
 
   const gradientStyle = {
     background: `
@@ -28,35 +30,48 @@ export default function ProjectHero({ hero }: HeroProps) {
       style={gradientStyle}
       className="relative left-1/2 -translate-x-1/2 w-screen h-[560px] md:h-[640px] flex items-center justify-center overflow-hidden"
     >
-      <div
-        className={`relative flex items-center justify-center ${
-          hasBoth ? "gap-12" : ""
-        }`}
-      >
-        {/* Desktop Image */}
-        {hasDesktop && (
-          <img
-            src={hero.desktopImage}
-            alt="Desktop preview"
-            className={`${
-              hasBoth
-                ? "w-[720px]"
-                : "w-[880px]"
-            } max-w-[92vw] drop-shadow-[0_50px_120px_rgba(0,0,0,0.4)]`}
-          />
+      <div className="relative flex items-center justify-center">
+
+        {/* VIDEO MODE */}
+        {hasVideo && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-[1000px] max-w-[92vw] rounded-2xl shadow-[0_50px_120px_rgba(0,0,0,0.4)]"
+          >
+            <source src={hero.video} type="video/mp4" />
+          </video>
         )}
 
-        {/* Mobile Image */}
-        {hasMobile && (
-          <img
-            src={hero.mobileImage}
-            alt="Mobile preview"
-            className={`${
-              hasBoth
-                ? "hidden md:block w-[260px]"
-                : "w-[320px]"
-            } drop-shadow-[0_40px_100px_rgba(0,0,0,0.45)]`}
-          />
+        {/* IMAGE MODE */}
+        {!hasVideo && (
+          <div
+            className={`relative flex items-center justify-center ${
+              hasBoth ? "gap-12" : ""
+            }`}
+          >
+            {hasDesktop && (
+              <img
+                src={hero.desktopImage}
+                alt="Desktop preview"
+                className={`${
+                  hasBoth ? "w-[720px]" : "w-[880px]"
+                } max-w-[92vw] drop-shadow-[0_50px_120px_rgba(0,0,0,0.4)]`}
+              />
+            )}
+
+            {hasMobile && (
+              <img
+                src={hero.mobileImage}
+                alt="Mobile preview"
+                className={`${
+                  hasBoth ? "hidden md:block w-[260px]" : "w-[320px]"
+                } drop-shadow-[0_40px_100px_rgba(0,0,0,0.45)]`}
+              />
+            )}
+          </div>
         )}
       </div>
 
