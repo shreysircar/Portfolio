@@ -39,7 +39,7 @@ export default function ProjectHero({ hero }: HeroProps) {
             muted
             loop
             playsInline
-            className="w-[1000px] max-w-[92vw] rounded-2xl shadow-[0_50px_120px_rgba(0,0,0,0.4)]"
+            className="w-[820px] md:w-[900px] max-w-[88vw] rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.35)]"
           >
             <source src={hero.video} type="video/mp4" />
           </video>
