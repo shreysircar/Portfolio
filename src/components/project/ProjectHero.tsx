@@ -5,25 +5,31 @@ type HeroProps = {
     colors: string[];
     desktopImage?: string;
     mobileImage?: string;
-    video?: string; // NEW
+    desktopVideo?: string;
+    mobileVideo?: string;
   };
 };
 
 export default function ProjectHero({ hero }: HeroProps) {
   const [c1, c2, c3] = hero.colors;
 
+  // Video checks
+  const hasDesktopVideo = !!hero.desktopVideo;
+  const hasMobileVideo = !!hero.mobileVideo;
+  const hasAnyVideo = hasDesktopVideo || hasMobileVideo;
+
+  // Image checks
   const hasDesktop = !!hero.desktopImage;
   const hasMobile = !!hero.mobileImage;
   const hasBoth = hasDesktop && hasMobile;
-  const hasVideo = !!hero.video;
 
-const gradientStyle = {
-  background: `
-    radial-gradient(circle at 20% 30%, ${c1}55 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, ${c2}55 0%, transparent 50%),
-    linear-gradient(180deg, ${c3 ?? c2}, ${c1})
-  `,
-};
+  const gradientStyle = {
+    background: `
+      radial-gradient(circle at 20% 30%, ${c1}55 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, ${c2}55 0%, transparent 50%),
+      linear-gradient(180deg, ${c3 ?? c2}, ${c1})
+    `,
+  };
 
   return (
     <div
@@ -32,33 +38,57 @@ const gradientStyle = {
     >
       <div className="relative flex items-center justify-center">
 
-        {/* VIDEO MODE */}
-     {hasVideo && (
-  <div className="relative">
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-      className="
-        w-[820px]
-        md:w-[900px]
-        max-w-[88vw]
-        rounded-2xl
-        shadow-[0_60px_140px_rgba(0,0,0,0.45)]
-      "
-    >
-      <source src={hero.video} type="video/mp4" />
-    </video>
+        {/* DESKTOP VIDEO */}
+        {hasDesktopVideo && (
+          <div className="relative flex justify-center">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="
+                w-[820px]
+                md:w-[900px]
+                max-w-[88vw]
+                rounded-2xl
+                shadow-[0_60px_140px_rgba(0,0,0,0.45)]
+              "
+            >
+              <source src={hero.desktopVideo} type="video/mp4" />
+            </video>
 
-    {/* Subtle glow layer */}
-    <div className="absolute inset-0 -z-10 rounded-3xl blur-3xl bg-black/40 scale-110" />
-  </div>
-)}
+            <div className="absolute inset-0 -z-10 rounded-3xl blur-3xl bg-black/40 scale-110" />
+          </div>
+        )}
+
+        {/* MOBILE VIDEO */}
+        {hasMobileVideo && (
+          <div className="relative flex justify-center">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="
+                w-[260px]
+                sm:w-[300px]
+                md:w-[320px]
+                max-w-[80vw]
+                rounded-3xl
+                shadow-[0_40px_100px_rgba(0,0,0,0.45)]
+              "
+            >
+              <source src={hero.mobileVideo} type="video/mp4" />
+            </video>
+
+            <div className="absolute inset-0 -z-10 rounded-3xl blur-3xl bg-black/30 scale-110" />
+          </div>
+        )}
 
         {/* IMAGE MODE */}
-        {!hasVideo && (
+        {!hasAnyVideo && (
           <div
             className={`relative flex items-center justify-center ${
               hasBoth ? "gap-12" : ""
@@ -85,8 +115,8 @@ const gradientStyle = {
             )}
           </div>
         )}
-      </div>
 
+      </div>
     </div>
   );
 }

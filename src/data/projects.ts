@@ -12,7 +12,8 @@ hero: {
   colors: string[]; // 2 or 3 colors
   desktopImage?: string;
   mobileImage?: string;
-  video?: string; 
+  desktopVideo?: string;
+  mobileVideo?: string;
 };
 
   overview: string;
@@ -50,7 +51,7 @@ export const projects: Project[] = [
 
   hero: {
     colors: ["#4FD1C5", "#A6EBF4", "#f1f1cf"],
-    video: "/projects/vaaya/hero.mp4",
+    desktopVideo: "/projects/vaaya/hero.mp4",
   },
 
   overview:
@@ -181,7 +182,7 @@ export const projects: Project[] = [
 
   hero: {
     colors: ["#0F172A", "#0cc9e7"],
-    video: "/projects/musings/mobile.mp4"
+    mobileVideo: "/projects/musings/mobile.mp4"
   },
 
   overview:
