@@ -314,7 +314,7 @@ export const projects: Project[] = [
   level: "small",
 
   hero: {
-    colors: ["#185FB7", "#1e85d9", "#d6def0"],
+    colors: ["#185FB7", "#79a1d3", "#eaecf2"],
     mobileVideo: "/projects/fluxnav/fluxnav.mp4",
   },
 
