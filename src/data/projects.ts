@@ -273,59 +273,27 @@ hero: {
   href: "https://github.com/shreysircar/musings"
 },
 },
-  {
-    slug: "pagex",
-    title: "PageX",
-    tagline:
-      "Component-driven frontend system engineered for modular scalability.",
-    level: "flagship",
-    hero: {
-  colors: ["#06b6d4", "#0ea5e9", "#0b1120"],
-      desktopImage: "/projects/pagex/desktop.png",
-    },
+{
+  slug: "pagex",
+  title: "PageX",
+  tagline:
+    "Component-driven frontend system engineered for modular scalability.",
 
-    overview:
-      "PageX explores frontend modularity with reusable component systems, predictable state flows, and performance-conscious rendering.",
+  level: "flagship",
 
-    architecture: {
-      hldImage: "/projects/pagex/hld.png",
-      lldImage: "/projects/pagex/lld.png",
-    },
-
-    features: [
-      {
-        title: "Reusable Component System",
-        description:
-          "Highly composable UI components with strict separation of concerns.",
-      },
-      {
-        title: "Predictable State Management",
-        description:
-          "Structured state boundaries to prevent cross-component coupling.",
-      },
-    ],
-
-    scalability: [
-      "Lazy-loaded component modules",
-      "Optimized re-render control",
-      "Code splitting strategy",
-    ],
-
-    challenges: [
-      "Preventing component over-coupling",
-      "Maintaining performance across complex layouts",
-    ],
-
-    tradeoffs: [
-      "Prioritized modularity over rapid prototyping speed.",
-      "Accepted slightly deeper component hierarchy for clarity.",
-    ],
-
-    learnings: [
-      "Refined understanding of frontend architecture patterns.",
-      "Improved discipline in component isolation design.",
-    ],
+  hero: {
+    colors: ["#10b981", "#065f46", "#111827"],
+    desktopVideo: "/projects/pagex.mp4",
   },
+
+  overview:
+    "PageX is currently in development.",
+
+  architecture: {
+    hldImage: "/projects/pagex/hld.png",
+    lldImage: "/projects/pagex/lld.png",
+  },
+},
   {
   slug: "fluxnav",
   title: "FluxNav",
