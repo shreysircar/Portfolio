@@ -77,9 +77,9 @@ export default function ProjectHero({ hero }: HeroProps) {
               playsInline
               preload="metadata"
               className="
-w-[220px]
-sm:w-[250px]
-md:w-[280px]
+w-[200px]
+sm:w-[220px]
+md:w-[240px]
                 max-w-[80vw]
                 rounded-3xl
                 shadow-[0_40px_100px_rgba(0,0,0,0.45)]
