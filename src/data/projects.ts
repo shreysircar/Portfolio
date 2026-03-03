@@ -277,13 +277,13 @@ hero: {
   slug: "pagex",
   title: "PageX",
   tagline:
-    "Component-driven frontend system engineered for modular scalability.",
+    "--------",
 
   level: "flagship",
 
   hero: {
     colors: ["#10b981", "#065f46", "#111827"],
-    desktopVideo: "/projects/pagex.mp4",
+    desktopVideo: "/projects/pagex/pagex.mp4",
   },
 
   overview:
