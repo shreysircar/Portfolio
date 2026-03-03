@@ -11,7 +11,9 @@ export default async function ProjectPage({
 
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project) return notFound();
+  if (!project) {
+    notFound();
+  }
 
   return <ProjectTemplate project={project} />;
 }
