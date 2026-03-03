@@ -174,59 +174,71 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "musings",
-    title: "Musings",
-    tagline:
-      "Minimal publishing platform focused on structured content rendering.",
-    level: "small",
-    hero: {
-  colors: ["#a78bfa", "#6366f1", "#1e293b"],
-      desktopImage: "/projects/musings/desktop.png",
-    },
+  slug: "musings",
+  title: "Musings",
+  tagline: "A minimal, personalized music streaming experience.",
+  level: "medium",
 
-    overview:
-      "Musings is a structured publishing platform designed with clean content pipelines, SEO optimization, and modular frontend architecture.",
-
-    architecture: {
-      hldImage: "/projects/musings/hld.png",
-      lldImage: "/projects/musings/lld.png",
-    },
-
-    features: [
-      {
-        title: "Markdown Rendering Engine",
-        description:
-          "Dynamic content rendering with sanitized parsing pipeline.",
-      },
-      {
-        title: "SEO Optimized Routing",
-        description:
-          "Structured dynamic routes for improved discoverability.",
-      },
-    ],
-
-    scalability: [
-      "Static generation readiness",
-      "Optimized image handling",
-      "Lightweight content schema",
-    ],
-
-    challenges: [
-      "Balancing dynamic flexibility with static rendering performance",
-      "Ensuring content sanitization without breaking formatting",
-    ],
-
-    tradeoffs: [
-      "Chose markdown pipeline over full CMS for simplicity.",
-      "Accepted limited WYSIWYG capability for cleaner architecture.",
-    ],
-
-    learnings: [
-      "Improved understanding of rendering strategies in modern frameworks.",
-      "Learned to optimize structured content systems for performance.",
-    ],
+  hero: {
+    colors: ["#0F172A", "#0cc9e7"],
+    video: "/projects/musings/mobile.mp4"
   },
 
+  overview:
+    "Musings is a custom-built music streaming application inspired by Spotify, designed to deliver a seamless and personalized listening experience. Built with Flutter and powered by Firebase, the app combines clean architecture, BLoC state management, and intuitive UI design to create a smooth and responsive mobile music platform.",
+
+  features: [
+    {
+      title: "Secure Firebase Authentication",
+      description:
+        "Implements sign-in and sign-up using Firebase Authentication, ensuring secure and personalized user sessions."
+    },
+    {
+      title: "Dynamic Music Library",
+      description:
+        "Fetches and displays songs from Cloud Firestore in a scrollable home feed for effortless browsing."
+    },
+    {
+      title: "Favorites Management",
+      description:
+        "Allows users to like songs and manage their personalized favorites collection from their profile."
+    },
+    {
+      title: "Responsive Music Player",
+      description:
+        "Built with BLoC-based state management to provide smooth play/pause control and reactive UI updates."
+    },
+    {
+      title: "Trending Music Videos",
+      description:
+        "Integrates YouTube API to fetch and display trending music videos within the app."
+    },
+    {
+      title: "Clean Architecture + BLoC",
+      description:
+        "Structured using Clean Architecture principles and BLoC for separation of concerns, scalability, and maintainability."
+    }
+  ],
+
+  scalability: [
+    "Modular architecture allows easy addition of new features such as playlists and recommendations.",
+    "Firebase backend supports real-time updates and scalable cloud storage.",
+    "State management via BLoC ensures predictable behavior as the app grows."
+  ],
+
+  challenges: [
+    "Managing audio playback state consistently across screens.",
+    "Synchronizing favorite songs between Firestore and UI state.",
+    "Integrating YouTube API while maintaining clean architecture separation."
+  ],
+
+  learnings: [
+    "Clean Architecture significantly improves long-term maintainability.",
+    "BLoC provides powerful control over reactive state in complex flows.",
+    "Backend structure design is as important as UI polish in real-world apps.",
+    "Following SDLC phases (Requirement → Design → Development → Testing) improves delivery clarity."
+  ]
+},
   {
     slug: "pagex",
     title: "PageX",
