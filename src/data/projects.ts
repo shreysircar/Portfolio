@@ -128,61 +128,76 @@ export const projects: Project[] = [
   href: "https://vaayafrontend.vercel.app/"
 },
 },
-  {
-    slug: "aegis",
-    title: "Aegis",
-    tagline:
-      "Secure authentication and access control system built with role-based logic.",
-    level: "medium",
+ {
+  slug: "aegis",
+  title: "Aegis",
+  tagline:
+    "ML-powered predictive crime safety platform visualizing temporal risk across urban communities.",
+  level: "medium",
 
-    hero: {
-  colors: ["#10b981", "#065f46", "#111827"],
-      desktopImage: "/projects/aegis/desktop.png",
-    },
-
-    overview:
-      "Aegis is a secure authentication system engineered with modular backend architecture, scalable token validation, and structured access control layers.",
-
-    architecture: {
-      hldImage: "/projects/aegis/hld.png",
-      lldImage: "/projects/aegis/lld.png",
-    },
-
-    features: [
-      {
-        title: "JWT-Based Authentication",
-        description:
-          "Stateless token validation to enable scalable user sessions.",
-      },
-      {
-        title: "Role-Based Access Control",
-        description:
-          "Granular permission management across hierarchical user roles.",
-      },
-    ],
-
-    scalability: [
-      "Stateless authentication model",
-      "Database indexing for role queries",
-      "Modular middleware separation",
-    ],
-
-    challenges: [
-      "Designing secure yet maintainable authorization layers",
-      "Preventing token misuse and replay attacks",
-    ],
-
-    tradeoffs: [
-      "Selected JWT over session storage to enable horizontal scalability.",
-      "Accepted slightly larger token payload for simpler permission checks.",
-    ],
-
-    learnings: [
-      "Gained practical experience in authentication security patterns.",
-      "Deepened understanding of API boundary protection.",
-    ],
+  hero: {
+    colors: [" #ff5441", "#FA6757", "#88403C"],
+    desktopVideo: "/projects/aegis/desktop.mp4",
   },
 
+  overview:
+    "Aegis is a cross-platform predictive crime safety platform built with Flutter and FastAPI. It leverages XGBoost-based machine learning models trained on Chicago Open Data to forecast crime risk across 77 community areas. The system provides temporal forecasting (year, month, hour) and interactive heatmap visualization for proactive safety awareness.",
+
+  architecture: {
+    hldImage: "/projects/aegis/hld.png",
+    lldImage: "/projects/aegis/lld.png",
+  },
+
+  features: [
+    {
+      title: "ML-Powered Risk Prediction",
+      description:
+        "XGBoost model trained on temporal and spatial features to forecast crime risk levels.",
+    },
+    {
+      title: "Interactive Heatmap Visualization",
+      description:
+        "Custom-rendered Chicago community map using Flutter CustomPainter with dynamic risk gradients.",
+    },
+    {
+      title: "Temporal Forecast Controls",
+      description:
+        "Predict safety risk by selecting year, month, and hour with real-time API updates.",
+    },
+    {
+      title: "Efficient State Management",
+      description:
+        "Riverpod-powered architecture with API caching to reduce redundant network calls.",
+    },
+  ],
+
+  scalability: [
+    "Stateless FastAPI prediction endpoints",
+    "PostgreSQL indexing for spatial-temporal queries",
+    "Modular ML pipeline enabling retraining and multi-city expansion",
+    "API response caching for performance optimization",
+  ],
+
+  challenges: [
+    "Engineering meaningful temporal + spatial features from raw crime data",
+    "Optimizing XGBoost model for balanced bias-variance tradeoff",
+    "Rendering 77-community SVG maps efficiently in Flutter",
+    "Designing prediction APIs for low-latency mobile usage",
+  ],
+
+  tradeoffs: [
+    "Selected XGBoost over deep learning models for structured tabular performance and faster inference.",
+    "Used community-level granularity instead of street-level prediction to balance accuracy and reliability.",
+    "Chose REST-based architecture over real-time streaming to simplify deployment.",
+  ],
+
+  learnings: [
+    "Hands-on experience deploying ML models in production-ready APIs.",
+    "Improved understanding of feature engineering for time-series prediction.",
+    "Learned how to balance UX responsiveness with backend computation cost.",
+    "Strengthened full-stack integration between Flutter frontend and Python backend.",
+  ],
+},
   {
   slug: "musings",
   title: "Musings",
