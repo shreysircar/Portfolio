@@ -133,12 +133,13 @@ export const projects: Project[] = [
   title: "Aegis",
   tagline:
     "ML-powered predictive crime safety platform visualizing temporal risk across urban communities.",
-  level: "medium",
+  level: "flagship",
 
-  hero: {
-    colors: [" #ff5441", "#FA6757", "#88403C"],
-    desktopVideo: "/projects/aegis/desktop.mp4",
-  },
+
+hero: {
+  colors: ["#FF7A6B", "#E4574F", "#7A2E2E"],
+  desktopVideo: "/projects/aegis/desktop.mp4",
+},
 
   overview:
     "Aegis is a cross-platform predictive crime safety platform built with Flutter and FastAPI. It leverages XGBoost-based machine learning models trained on Chicago Open Data to forecast crime risk across 77 community areas. The system provides temporal forecasting (year, month, hour) and interactive heatmap visualization for proactive safety awareness.",
