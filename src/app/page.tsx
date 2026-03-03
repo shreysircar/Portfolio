@@ -112,8 +112,8 @@ I'm a Computer Science Engineering undergrad building end-to-end systems with la
             subtitle="Web/Mobile Platform"
             year="2025"
             media={{
-  type: "image",
-  src: "/images/musings.png",
+  type: "video",
+  src: "/projects/aegis/aegis.mp4",
 }}
             href="/projects/aegis"
             variant="medium"
