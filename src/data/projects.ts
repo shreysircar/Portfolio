@@ -198,6 +198,10 @@ hero: {
     "Learned how to balance UX responsiveness with backend computation cost.",
     "Strengthened full-stack integration between Flutter frontend and Python backend.",
   ],
+    cta: {
+  label: "View Repository",
+  href: "https://github.com/shreysircar/Aegis"
+},
 },
   {
   slug: "musings",
