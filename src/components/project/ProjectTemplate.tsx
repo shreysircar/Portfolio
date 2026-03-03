@@ -22,13 +22,13 @@ export default function ProjectTemplate({ project }: Props) {
   const titleTopPadding = isFlagship ? "pt-28" : "pt-20";
   const titleBottomPadding = isFlagship ? "pb-16" : "pb-12";
 
-  const sectionSpacing = isFlagship
-    ? "py-28"
-    : isMedium
-    ? "py-24"
-    : "py-16";
+const sectionSpacing = isFlagship
+  ? "py-16"
+  : isMedium
+  ? "py-14"
+  : "py-12";
 
-  const learningsSpacing = isFlagship ? "py-32" : "py-28";
+const learningsSpacing = isFlagship ? "py-18" : "py-16";
 
   return (
     <div className="w-full">
@@ -36,34 +36,55 @@ export default function ProjectTemplate({ project }: Props) {
       {/* Hero Gradient Section */}
       <ProjectHero hero={project.hero} />
 
-      {/* Title + Tagline */}
-      <section
-        className={`max-w-5xl mx-auto px-6 ${titleTopPadding} ${titleBottomPadding}`}
-      >
-        {isFlagship && (
-          <p className="text-sm uppercase tracking-[0.2em] text-neutral-400 mb-4">
-            Case Study
-          </p>
-        )}
+{/* Title + Tagline */}
+<section
+  className={`max-w-5xl mx-auto px-6 ${titleTopPadding} ${titleBottomPadding}`}
+>
+  {isFlagship && (
+    <p className="text-sm uppercase tracking-[0.2em] text-neutral-400 mb-4">
+      Case Study
+    </p>
+  )}
 
-        <h1
-          className={`font-semibold tracking-tight text-neutral-900 ${
-            isFlagship
-              ? "text-5xl md:text-6xl"
-              : "text-4xl md:text-5xl"
-          }`}
-        >
-          {project.title}
-        </h1>
+  <h1
+    className={`font-semibold tracking-tight text-neutral-900 ${
+      isFlagship
+        ? "text-5xl md:text-6xl"
+        : "text-4xl md:text-5xl"
+    }`}
+  >
+    {project.title}
+  </h1>
 
-        <p
-          className={`mt-4 text-neutral-500 max-w-3xl ${
-            isFlagship ? "text-xl" : "text-lg"
-          }`}
-        >
-          {project.tagline}
-        </p>
-      </section>
+  <p
+    className={`mt-4 text-neutral-500 max-w-3xl ${
+      isFlagship ? "text-xl" : "text-lg"
+    }`}
+  >
+    {project.tagline}
+  </p>
+
+  {/* 👇 Add Live Demo Here */}
+  <div className="mt-8">
+    <a
+      href="https://vaayafrontend.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex items-center gap-2
+        px-6 py-2.5
+        rounded-full
+        border border-neutral-300
+        text-sm font-medium
+        text-neutral-800
+        hover:bg-neutral-900 hover:text-white
+        transition-all duration-300
+      "
+    >
+      View Live Demo →
+    </a>
+  </div>
+</section>
 
       {/* Overview */}
       <section className={`max-w-5xl mx-auto px-6 ${sectionSpacing}`}>
