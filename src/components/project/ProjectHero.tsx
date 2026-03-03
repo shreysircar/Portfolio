@@ -17,6 +17,7 @@ export default function ProjectHero({ hero }: HeroProps) {
   const hasDesktopVideo = !!hero.desktopVideo;
   const hasMobileVideo = !!hero.mobileVideo;
   const hasAnyVideo = hasDesktopVideo || hasMobileVideo;
+  const isMobileOnly = hasMobileVideo && !hasDesktopVideo;
 
   // Image checks
   const hasDesktop = !!hero.desktopImage;
@@ -34,7 +35,11 @@ export default function ProjectHero({ hero }: HeroProps) {
   return (
     <div
       style={gradientStyle}
-      className="relative left-1/2 -translate-x-1/2 w-screen h-[560px] md:h-[640px] flex items-center justify-center overflow-hidden"
+      className={`
+  relative left-1/2 -translate-x-1/2 w-screen
+  ${isMobileOnly ? "h-[480px] md:h-[540px]" : "h-[560px] md:h-[640px]"}
+  flex items-center justify-center overflow-hidden
+`}
     >
       <div className="relative flex items-center justify-center">
 
@@ -72,9 +77,9 @@ export default function ProjectHero({ hero }: HeroProps) {
               playsInline
               preload="metadata"
               className="
-                w-[260px]
-                sm:w-[300px]
-                md:w-[320px]
+w-[220px]
+sm:w-[250px]
+md:w-[280px]
                 max-w-[80vw]
                 rounded-3xl
                 shadow-[0_40px_100px_rgba(0,0,0,0.45)]
