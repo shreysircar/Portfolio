@@ -283,7 +283,7 @@ hero: {
 
   hero: {
     colors: ["#10b981", "#065f46", "#111827"],
-    desktopVideo: "/projects/pagex/pagex.mp4",
+    mobileVideo: "/projects/pagex/pagex.mp4",
   },
 
   overview:
