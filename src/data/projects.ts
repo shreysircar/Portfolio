@@ -38,60 +38,84 @@ hero: {
 // src/data/projects.ts
 
 export const projects: Project[] = [
-  {
-    slug: "vaaya",
-    title: "Vaaya",
-    tagline:
-      "AI-driven conversational system engineered for scalable context retention.",
-    level: "flagship",
-hero: {
-colors: ["#4FD1C5", "#A6EBF4", "#f1f1cf"],
-  video: "/projects/vaaya/hero.mp4",
-},
+{
+  slug: "vaaya",
+  title: "Vaaya",
+  tagline:
+    "Production-ready full-stack e-commerce platform engineered for scalability, secure role-based access, and real-world deployment.",
 
-    overview:
-      "Vaaya is a conversational platform designed to maintain contextual continuity across sessions while ensuring scalability, modular API layers, and optimized token usage.",
+  level: "flagship",
 
-    architecture: {
-      hldImage: "/projects/vaaya/hld.png",
-      lldImage: "/projects/vaaya/lld.png",
-    },
-
-    features: [
-      {
-        title: "Contextual Memory Layer",
-        description:
-          "Persistent session-based context management to preserve conversation flow across requests.",
-      },
-      {
-        title: "Token Optimized Prompting",
-        description:
-          "Structured prompts to reduce latency and API cost while maintaining response quality.",
-      },
-    ],
-
-    scalability: [
-      "Stateless backend architecture",
-      "Horizontal scaling readiness",
-      "Optimized database indexing strategy",
-    ],
-
-    challenges: [
-      "Managing context window limitations in LLM APIs",
-      "Balancing latency and token cost efficiency",
-    ],
-
-    tradeoffs: [
-      "Chose stateless architecture over in-memory session storage for scalability.",
-      "Accepted slight context trimming to reduce token consumption.",
-    ],
-
-    learnings: [
-      "Strengthened understanding of distributed conversational state management.",
-      "Improved API design discipline under cost-performance constraints.",
-    ],
+  hero: {
+    colors: ["#4FD1C5", "#A6EBF4", "#f1f1cf"],
+    video: "/projects/vaaya/hero.mp4",
   },
 
+  overview:
+    "Vaaya is a fully deployed full-stack e-commerce web platform built for a single-seller business model, delivering a complete shopping experience alongside a secure admin dashboard. The system features a decoupled frontend–backend architecture, JWT-based role authentication, and a relational schema optimized for scalability. Designed with future expansion in mind, the platform can evolve into a multi-seller marketplace with minimal structural changes.",
+
+  architecture: {
+    hldImage: "/projects/vaaya/hld.png",
+    lldImage: "/projects/vaaya/lld.png",
+
+    hldDescription:
+      "Vaaya follows a decoupled client–server architecture where the Next.js frontend communicates with a RESTful Express backend via secure JWT-authenticated API requests. The backend abstracts business logic into modular services and interacts with a PostgreSQL database through Prisma ORM. Cloud deployment separation across Vercel (frontend), Render (backend), and Neon (database) enables independent scaling, fault isolation, and production-grade infrastructure management.",
+
+    lldDescription:
+      "The backend implements a layered architecture composed of Routes, Middleware, Controllers, Services, and Data Access layers. JWT authentication middleware validates and authorizes requests before controller execution. Business logic is encapsulated within service modules to enforce separation of concerns, while Prisma ORM manages structured interaction with a normalized relational PostgreSQL schema handling users, products, categories, and order lifecycles."
+  },
+
+  features: [
+    {
+      title: "Full Customer Commerce Flow",
+      description:
+        "Complete shopping lifecycle including product browsing, category filtering, product detail views, cart management, wishlist, secure checkout, and order history tracking.",
+    },
+    {
+      title: "Secure Role-Based Authentication",
+      description:
+        "JWT-based authentication system supporting user and admin roles with protected API routes and middleware-level authorization checks.",
+    },
+    {
+      title: "Comprehensive Admin Dashboard",
+      description:
+        "Centralized admin interface for product CRUD operations, category and subcategory management, order tracking, user management, inventory control, and homepage content configuration.",
+    },
+    {
+      title: "Production-Ready Cloud Deployment",
+      description:
+        "Fully deployed infrastructure with frontend on Vercel, backend on Render, and PostgreSQL hosted on Neon, demonstrating real-world CI/CD and environment-based configuration.",
+    },
+  ],
+
+  scalability: [
+    "Decoupled frontend (Next.js App Router) and backend (Express REST API) architecture",
+    "Normalized PostgreSQL relational schema optimized for extensibility",
+    "JWT-based role system designed for multi-seller marketplace expansion",
+    "Cloud-hosted infrastructure enabling horizontal backend scaling",
+    "Environment-based configuration for development and production separation",
+  ],
+
+  challenges: [
+    "Designing a relational schema flexible enough for future multi-vendor support",
+    "Implementing secure role-based route protection across frontend and backend layers",
+    "Ensuring consistent state synchronization between cart, orders, and inventory",
+    "Maintaining production stability across distributed cloud services (Vercel, Render, Neon)",
+  ],
+
+  tradeoffs: [
+    "Structured as a single-seller system initially to simplify domain complexity while preserving marketplace scalability.",
+    "Chose RESTful API design over GraphQL for clearer separation and simpler debugging in early production stages.",
+    "Integrated admin dashboard within the same frontend codebase to optimize development velocity and deployment simplicity.",
+  ],
+
+  learnings: [
+    "Strengthened understanding of full-stack system design and production deployment workflows.",
+    "Deepened knowledge of authentication flows, token security, and middleware-based authorization.",
+    "Improved database schema modeling for scalable commerce systems.",
+    "Gained practical experience integrating multiple cloud services into a cohesive production environment.",
+  ],
+},
   {
     slug: "aegis",
     title: "Aegis",
