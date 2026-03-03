@@ -11,6 +11,10 @@ type HeroProps = {
 export default function ProjectHero({ hero }: HeroProps) {
   const [c1, c2, c3] = hero.colors;
 
+  const hasDesktop = !!hero.desktopImage;
+  const hasMobile = !!hero.mobileImage;
+  const hasBoth = hasDesktop && hasMobile;
+
   const gradientStyle = {
     background: `
       radial-gradient(circle at 25% 20%, ${c1}33 0%, transparent 40%),
@@ -24,26 +28,40 @@ export default function ProjectHero({ hero }: HeroProps) {
       style={gradientStyle}
       className="relative left-1/2 -translate-x-1/2 w-screen h-[560px] md:h-[640px] flex items-center justify-center overflow-hidden"
     >
-      <div className="relative flex items-center justify-center gap-10">
-
-        {hero.desktopImage && (
+      <div
+        className={`relative flex items-center justify-center ${
+          hasBoth ? "gap-12" : ""
+        }`}
+      >
+        {/* Desktop Image */}
+        {hasDesktop && (
           <img
             src={hero.desktopImage}
             alt="Desktop preview"
-            className="w-[720px] max-w-[92vw] drop-shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
+            className={`${
+              hasBoth
+                ? "w-[720px]"
+                : "w-[880px]"
+            } max-w-[92vw] drop-shadow-[0_50px_120px_rgba(0,0,0,0.4)]`}
           />
         )}
 
-        {hero.mobileImage && (
+        {/* Mobile Image */}
+        {hasMobile && (
           <img
             src={hero.mobileImage}
             alt="Mobile preview"
-            className="hidden md:block w-[240px] drop-shadow-[0_30px_70px_rgba(0,0,0,0.4)]"
+            className={`${
+              hasBoth
+                ? "hidden md:block w-[260px]"
+                : "w-[320px]"
+            } drop-shadow-[0_40px_100px_rgba(0,0,0,0.45)]`}
           />
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-b from-transparent to-white" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-white/80 to-white" />
     </div>
   );
 }
