@@ -33,17 +33,29 @@ export default function ProjectHero({ hero }: HeroProps) {
       <div className="relative flex items-center justify-center">
 
         {/* VIDEO MODE */}
-        {hasVideo && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-[820px] md:w-[900px] max-w-[88vw] rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.35)]"
-          >
-            <source src={hero.video} type="video/mp4" />
-          </video>
-        )}
+     {hasVideo && (
+  <div className="relative">
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      className="
+        w-[820px]
+        md:w-[900px]
+        max-w-[88vw]
+        rounded-2xl
+        shadow-[0_60px_140px_rgba(0,0,0,0.45)]
+      "
+    >
+      <source src={hero.video} type="video/mp4" />
+    </video>
+
+    {/* Subtle glow layer */}
+    <div className="absolute inset-0 -z-10 rounded-3xl blur-3xl bg-black/40 scale-110" />
+  </div>
+)}
 
         {/* IMAGE MODE */}
         {!hasVideo && (
@@ -75,8 +87,6 @@ export default function ProjectHero({ hero }: HeroProps) {
         )}
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-white/80 to-white" />
     </div>
   );
 }
