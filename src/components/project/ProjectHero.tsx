@@ -22,7 +22,7 @@ export default function ProjectHero({ hero }: HeroProps) {
   return (
     <div
       style={gradientStyle}
-      className="w-full h-[560px] md:h-[640px] flex items-center justify-center relative overflow-hidden"
+      className="relative left-1/2 -translate-x-1/2 w-screen h-[560px] md:h-[640px] flex items-center justify-center overflow-hidden"
     >
       <div className="relative flex items-center justify-center gap-10">
 
@@ -43,7 +43,6 @@ export default function ProjectHero({ hero }: HeroProps) {
         )}
       </div>
 
-      {/* Subtle bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-b from-transparent to-white" />
     </div>
   );
