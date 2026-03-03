@@ -65,9 +65,10 @@ const learningsSpacing = isFlagship ? "py-18" : "py-16";
   </p>
 
   {/* 👇 Add Live Demo Here */}
+ {project.cta && (
   <div className="mt-8">
     <a
-      href="https://vaayafrontend.vercel.app/"
+      href={project.cta.href}
       target="_blank"
       rel="noopener noreferrer"
       className="
@@ -81,9 +82,10 @@ const learningsSpacing = isFlagship ? "py-18" : "py-16";
         transition-all duration-300
       "
     >
-      View Live Demo →
+      {project.cta.label} →
     </a>
   </div>
+)}
 </section>
 
       {/* Overview */}

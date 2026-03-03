@@ -37,6 +37,11 @@ hero: {
   tradeoffs?: string[];
 
   learnings?: string[];
+
+    cta?: {
+    label: string;
+    href: string;
+  };
 };
 // src/data/projects.ts
 
@@ -118,6 +123,10 @@ export const projects: Project[] = [
     "Improved database schema modeling for scalable commerce systems.",
     "Gained practical experience integrating multiple cloud services into a cohesive production environment.",
   ],
+  cta: {
+  label: "View Demo Live",
+  href: "https://vaayafrontend.vercel.app/"
+},
 },
   {
     slug: "aegis",
@@ -238,7 +247,11 @@ export const projects: Project[] = [
     "BLoC provides powerful control over reactive state in complex flows.",
     "Backend structure design is as important as UI polish in real-world apps.",
     "Following SDLC phases (Requirement → Design → Development → Testing) improves delivery clarity."
-  ]
+  ],
+  cta: {
+  label: "View Repository",
+  href: "https://github.com/yourusername/musings"
+},
 },
   {
     slug: "pagex",
