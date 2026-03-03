@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "AI-driven conversational system engineered for scalable context retention.",
     level: "flagship",
 hero: {
-  colors: ["#a6ebf4", "#f1f1cf"],
+colors: ["#4FD1C5", "#A6EBF4", "#f1f1cf"],
   video: "/projects/vaaya/hero.mp4",
 },
 

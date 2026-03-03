@@ -17,13 +17,13 @@ export default function ProjectHero({ hero }: HeroProps) {
   const hasBoth = hasDesktop && hasMobile;
   const hasVideo = !!hero.video;
 
-  const gradientStyle = {
-    background: `
-      radial-gradient(circle at 25% 20%, ${c1}33 0%, transparent 40%),
-      radial-gradient(circle at 75% 80%, ${c2}33 0%, transparent 40%),
-      linear-gradient(135deg, ${c2}, ${c3 ?? c2})
-    `,
-  };
+const gradientStyle = {
+  background: `
+    radial-gradient(circle at 20% 30%, ${c1}55 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, ${c2}55 0%, transparent 50%),
+    linear-gradient(180deg, ${c3 ?? c2}, ${c1})
+  `,
+};
 
   return (
     <div
