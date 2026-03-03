@@ -20,6 +20,8 @@ hero: {
   architecture?: {
     hldImage?: string;
     lldImage?: string;
+    hldDescription?: string;
+    lldDescription?: string;
   };
 
   features?: {
