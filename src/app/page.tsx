@@ -77,8 +77,7 @@ className="
       bg-clip-text
       text-transparent
     ">
-I'm a Computer Science Engineering undergrad building end-to-end systems with layered architecture and optimized data flows, focused on maintainability, performance, and scalable design.
-    </h1>
+I’m Shrey — a Computer Science Engineering undergrad who designs and builds scalable, high-performance systems powered by strong DSA fundamentals, thoughtful system design, and practical AI integration. I write clean, maintainable code engineered to scale.</h1>
   </div>
 
 {/* Section Divider */}
