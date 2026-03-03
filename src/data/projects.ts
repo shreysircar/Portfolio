@@ -250,7 +250,7 @@ export const projects: Project[] = [
   ],
   cta: {
   label: "View Repository",
-  href: "https://github.com/yourusername/musings"
+  href: "https://github.com/shreysircar/musings"
 },
 },
   {
@@ -310,67 +310,74 @@ export const projects: Project[] = [
   slug: "fluxnav",
   title: "FluxNav",
   tagline:
-    "Graph-powered metro navigation engine built for optimal route computation and real-world scalability.",
-    level: "small",
+    "Smart metro navigation engine powered by graph algorithms and real-world transit data.",
+  level: "small",
+
   hero: {
-    colors: ["#f59e0b", "#b45309", "#0f172a"],
-    desktopImage: "/projects/fluxnav/desktop.png",
-    mobileImage: "/projects/fluxnav/mobile.png",
+    colors: ["#3644dc", "#0967b4", "#d6def0"],
+    mobileVideo: "/projects/fluxnav/fluxnav.mp4",
   },
 
   overview:
-    "FluxNav is a cross-platform Flutter application engineered to compute optimal Delhi Metro routes using graph algorithms. It models metro stations as nodes and connections as weighted edges, enabling shortest path computation, minimum interchange routing, and location-aware station discovery via Google Maps integration.",
-
-  architecture: {
-    hldImage: "/projects/fluxnav/hld.png",
-    lldImage: "/projects/fluxnav/lld.png",
-  },
+    "FluxNav is a cross-platform Flutter application built to compute optimal routes across the Delhi Metro network using graph algorithms. It models stations as nodes and connections as weighted edges, enabling shortest-path routing, minimal interchange computation, and real-time nearby station discovery via Google Maps integration. Metro datasets (station endpoints, lines, and connectivity) are statically structured within the application for fast local computation.",
 
   features: [
     {
       title: "Shortest Route Engine (Dijkstra)",
       description:
-        "PriorityQueue-optimized Dijkstra implementation to compute minimum distance paths across weighted metro graphs.",
+        "PriorityQueue-optimized Dijkstra implementation to compute the shortest path based on distance and fare across weighted metro graphs.",
     },
     {
-      title: "Minimum Interchange Path",
+      title: "Minimum Interchange Routing",
       description:
-        "Custom graph traversal leveraging edge metadata (line color + distance) to minimize interchange transitions.",
+        "Custom graph traversal using edge metadata (line color + distance) to minimize interchange transitions between metro lines.",
     },
     {
-      title: "Nearby Station Discovery",
+      title: "Interactive Metro Map",
       description:
-        "Integrated Google Maps and Places API to detect and display nearby metro stations in real-time.",
+        "Google Maps integration to visualize metro lines, stations, and computed routes dynamically.",
+    },
+    {
+      title: "Nearby Station Detection",
+      description:
+        "Google Places API integration to suggest metro stations based on real-time user location.",
     },
     {
       title: "Dual Route Output",
       description:
-        "Returns optimized paths based on both shortest distance and least interchanges for user flexibility.",
+        "Returns optimized paths for both shortest distance and least interchanges to enhance travel flexibility.",
     },
-  ],
+    ],
 
   scalability: [
     "Custom graph data structures for efficient node-edge lookup",
     "PriorityQueue optimization for reduced path computation time",
-    "Separation of UI and algorithmic logic for maintainability",
-    "Modular API layer for location services integration",
+    "Separation of UI and routing engine for maintainability",
+    "Locally structured metro dataset for fast offline computations",
+    "Architecture designed to support future AI-driven route predictions",
   ],
 
   challenges: [
-    "Handling interchange logic without inflating graph complexity",
-    "Balancing algorithm efficiency with real-time UI responsiveness",
-    "Managing dynamic route rendering on map overlays",
+    "Implementing interchange-aware routing without increasing graph complexity",
+    "Balancing algorithmic performance with real-time UI rendering",
+    "Designing efficient edge metadata handling for multi-line transitions",
   ],
 
   tradeoffs: [
-    "Chose custom graph implementation over third-party libraries for full control.",
-    "Accepted slightly higher memory usage to maintain dual-route computation capability.",
+    "Chose static in-app metro dataset over remote API to ensure fast and deterministic routing.",
+    "Accepted slightly higher memory usage to support dual-route computation.",
   ],
 
   learnings: [
-    "Deepened understanding of applied graph algorithms in real-world systems.",
-    "Strengthened architectural thinking in separating core logic from UI layers.",
+    "Applied graph theory concepts to a real-world transportation system.",
     "Improved performance tuning using Dart collections and priority queues.",
+    "Strengthened architectural separation between algorithmic logic and UI layers.",
+    "Gained practical experience integrating mapping APIs with custom algorithms.",
   ],
+
+  cta: {
+  label: "View Repository",
+  href:  "https://github.com/shreysircar/fluxnav",
 },
+  }
 ];
