@@ -32,7 +32,7 @@ export const sections: {
   {
     title: "CONNECT",
     items: [
-      { label: "Mail", href: "mailto:sircarshrey@gmail.com", external: true },
+      { label: "Mail", href: "https://mail.google.com/mail/?view=cm&fs=1&to=sircarshrey@gmail.com", external: true },
       { label: "Instagram", href: "https://instagram.com/musingsbyshrey", external: true },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/shrey-sircar-907629283/", external: true },
       { label: "Leetcode", href: "https://leetcode.com/u/shrey_2904", external: true },
