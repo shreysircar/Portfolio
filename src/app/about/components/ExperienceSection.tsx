@@ -38,7 +38,20 @@ export default function ExperienceSection() {
 
             href="/experience/intern1"
             variant="square"
-          />          
+          />     
+
+                    <ProductCard
+            title="Birlasoft Ltd"
+            subtitle=" Intern"
+            year="2026"
+                        media={{
+  type: "image",
+  src: "/experience/intern2.png",
+}}
+
+            href="/experience/intern2"
+            variant="square"
+          />      
 
 
         </div>
