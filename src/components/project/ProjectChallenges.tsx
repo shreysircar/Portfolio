@@ -11,6 +11,7 @@ export default function ProjectChallenges({ challenges }: Props) {
         Challenges
       </h2>
 
+    
       <ul className="mt-10 space-y-4 text-neutral-600">
         {challenges.map((item, index) => (
           <li key={index}>• {item}</li>
