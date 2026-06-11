@@ -168,7 +168,18 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
             variant="square"
           />
 
-      
+                          <ProductCard
+            title="Birlasoft Ltd"
+            subtitle="Intern"
+            year="2026"
+            media={{
+  type: "image",
+  src: "/experience/intern2.png",
+}}
+            href="/experience/intern2"
+            variant="square"
+          />
+          
      <ProductCard
             title="FluxNav"
             subtitle="Mobile App"
