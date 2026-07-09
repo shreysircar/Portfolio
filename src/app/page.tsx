@@ -97,19 +97,22 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
  <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
         {/* COLUMN 1 */}
+
+        
         <div className="flex flex-col gap-3">
                     <ProductCard
-            title="DotBotics Pvt Ltd"
-            subtitle="SDE Intern"
-            year="2025"
+         
+            title="Birlasoft Ltd"
+            subtitle="AI/ML Intern"
+            year="2026"
             media={{
   type: "image",
-  src: "/experience/intern1.png",
+  src: "/experience/intern2.png",
 }}
-            href="/experience/intern1"
+            href="/experience/intern2"
             variant="square"
             icon={ExperienceIcon}
-            iconColor="text-[#114267]"
+            iconColor="text-[#e30002]"
           />
 
             <ProductCard
@@ -163,7 +166,22 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
                         iconColor="text-[#16afc0]"
           />
 
+
+<ProductCard
+  title="Ribionic Solutions"
+  subtitle="Software Engineer Intern (Frontend)"
+  year="2026"
+  media={{
+    type: "image", // or "video"
+    src: "/experience/intern3.png",
+  }}
+  href="/experience/intern3"
+  variant="square"
+  icon={ExperienceIcon}
+  iconColor="text-[#61adb6]" // teal to match Ribionic branding
+/>
         </div>
+
 
         {/* COLUMN 3 */}
         <div className="flex flex-col gap-3">
@@ -183,17 +201,17 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
           />
 
                           <ProductCard
-            title="Birlasoft Ltd"
-            subtitle="Intern"
-            year="2026"
+  title="DotBotics Pvt Ltd"
+            subtitle="SDE Intern"
+            year="2025"
             media={{
   type: "image",
-  src: "/experience/intern2.png",
+  src: "/experience/intern1.png",
 }}
-            href="/experience/intern2"
+            href="/experience/intern1"
             variant="square"
             icon={ExperienceIcon}
-            iconColor="text-[#e30002]"
+            iconColor="text-[#114267]"
           />
           
      <ProductCard
