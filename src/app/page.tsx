@@ -1,5 +1,9 @@
 "use client";
 import {
+  ProjectIcon,
+  ExperienceIcon,
+} from "@/constants/cardIcons";
+import {
   Monitor,
   Smartphone,
   Server,
@@ -104,6 +108,8 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 }}
             href="/experience/intern1"
             variant="square"
+            icon={ExperienceIcon}
+            iconColor="text-[#114267]"
           />
 
             <ProductCard
@@ -116,6 +122,8 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 }}
             href="/projects/aegis"
             variant="medium"
+              icon={ProjectIcon}
+              iconColor="text-[#4d4f50]"
           />
 
 
@@ -137,6 +145,8 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 
             href="/projects/vaaya"
             variant="wide"
+              icon={ProjectIcon}
+              iconColor="text-[#0f5b6b]"
           />
 
           <ProductCard
@@ -149,6 +159,8 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 }}
             href="/projects/musings"
                       variant="medium"
+                        icon={ProjectIcon}
+                        iconColor="text-[#16afc0]"
           />
 
         </div>
@@ -166,6 +178,8 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 }}
             href="/projects/pagex"
             variant="square"
+            icon={ProjectIcon}
+            iconColor="text-[#fefeef]"
           />
 
                           <ProductCard
@@ -178,6 +192,8 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 }}
             href="/experience/intern2"
             variant="square"
+            icon={ExperienceIcon}
+            iconColor="text-[#e30002]"
           />
           
      <ProductCard
@@ -190,6 +206,7 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 }}
             href="/projects/fluxnav"
             variant="square"
+            icon={ProjectIcon}
           />
         </div>
 

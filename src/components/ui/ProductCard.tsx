@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LucideIcon } from "lucide-react";
 
 type ProductCardProps = {
   title: string;
@@ -9,6 +10,8 @@ media: {
   type: "image" | "video";
   src: string;
 };
+icon?: LucideIcon;  
+iconColor?: string;
   href?: string;
   variant?: "tall" | "medium" | "wide" | "square";
 };
@@ -18,6 +21,8 @@ export default function ProductCard({
   subtitle,
   year,
   media,
+  icon: Icon,
+  iconColor = "text-white/80", // default
   href,
   variant = "medium",
 }: ProductCardProps) {
@@ -68,6 +73,23 @@ className={`
   className="absolute inset-0 w-full h-full object-cover"
 />
 )}
+
+ {Icon && (
+    <div className="absolute top-5 right-5 z-10">
+      <Icon
+     className={`
+    h-5
+    w-5
+    ${iconColor}
+    drop-shadow-lg
+    transition-all
+    duration-300
+    group-hover:scale-110
+  `}
+  strokeWidth={1.8}
+  />
+    </div>
+  )}
       </div>
 
 {/* Typography */}
