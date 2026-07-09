@@ -42,7 +42,7 @@ export default function ExperienceSection() {
 
                     <ProductCard
             title="Birlasoft Ltd"
-            subtitle=" Intern"
+            subtitle="AI/ML Intern"
             year="2026"
                         media={{
   type: "image",
@@ -53,6 +53,18 @@ export default function ExperienceSection() {
             variant="square"
           />      
 
+                    <ProductCard
+            title="Ribionic Solutions"
+            subtitle="SWE Intern (Frontend)"
+            year="2026"
+                        media={{
+  type: "image",
+  src: "/experience/intern3.png",
+}}
+
+            href="/experience/intern3"
+            variant="square"
+          />    
 
         </div>
       </div>
