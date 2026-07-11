@@ -103,7 +103,7 @@ const [minimized, setMinimized] = useState(false);
       <p className="text-[12px] text-neutral-600 leading-relaxed">
         Currently pursuing undergraduate studies with emphasis on
         software engineering, distributed systems, scalable backend
-        design, and production-grade architecture across layered systems.
+        design and practical AI integration..
       </p>
     </div>
 
@@ -174,9 +174,9 @@ const [minimized, setMinimized] = useState(false);
   <div className="space-y-4 text-[14px] leading-relaxed">
 <p><b>Bachelor of Technology — Computer Science & Engineering</b></p>
 
-<p><b>Focused on:</b> Data structures, algorithms, operating systems, databases, and computer networks — building a strong systems-oriented foundation.</p>
+<p><b>Focused on:</b> Building a strong foundation in data structures, algorithms, operating systems, databases, computer networks, and software engineering.</p>
 
-<p>Applied concepts through scalable full-stack projects, backend architecture design, and structured problem solving.</p>
+<p>Putting those fundamentals into practice through scalable backend systems, production-ready web applications, and AI-driven products.</p>
 
 <p>Engaged in freelance development work and participated in multiple competitive hackathons, including Smart India Hackathon (SIH), working on rapid prototyping, collaborative system design, and real-world problem statements.</p>
 

@@ -73,17 +73,17 @@ export default function InfoSection() {
 
           <div className="space-y-3 text-[12px] leading-[1.5] text-neutral-600">
             <p>
-             I’m pursuing Computer Science with a growing focus on the systems beneath software.
+             I'm pursuing Computer Science with a passion for engineering scalable software systems.
             </p>
 
             <p>
-             Over time, I’ve become drawn to architecture, modular boundaries, and the structure that sustains applications at scale.
+           Building real-world products has taught me to value clean architecture, thoughtful design, and code that's built to last.
             </p>
             <p>
-             Through building production-grade platforms, I’ve learned that thoughtful abstractions and clean layering matter as much as features.
+           From designing APIs and databases to integrating modern AI into practical applications, solving complex engineering problems is what I enjoy most.
             </p>
             <p>
-             I’m motivated by designing software that balances performance, clarity, and human experience — engineered with intention and discipline.
+           What motivates me the most is building software that balances performance, clarity, and human experience—engineered with intention and discipline.
             </p>
   
 

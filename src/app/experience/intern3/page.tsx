@@ -7,10 +7,11 @@ const technologies = [
   "React",
   "TypeScript",
   "Tailwind CSS",
-  "Framer Motion",
+  "Node.js",
+  "SMTP",
+  "SEO",
   "Vercel",
   "Git",
-  "SEO",
 ];
 
 export default function Intern3Page() {
@@ -47,12 +48,12 @@ export default function Intern3Page() {
             </a>
           </div>
 
-          <p className="mt-6 text-[18px] text-neutral-600 leading-relaxed max-w-3xl">
-            Designed, developed, and deployed Ribionic Solutions' official
-            corporate website, replacing a legacy WordPress implementation with
-            a modern Next.js application focused on performance, scalability,
-            and user experience.
-          </p>
+<p className="mt-6 text-[18px] text-neutral-600 leading-relaxed max-w-3xl">
+  Rebuilt Ribionic Solutions' corporate website from WordPress to
+  Next.js, delivering a modern, production-ready platform featuring
+  responsive design, dynamic content, backend integrations, SEO
+  optimization, and end-to-end deployment.
+</p>
 
           <div className="mt-8 flex flex-wrap gap-3 max-w-3xl">
             {technologies.map((tech) => (
@@ -75,11 +76,12 @@ export default function Intern3Page() {
             Context
           </h2>
 
-          <p className="text-[17px] text-neutral-600 leading-relaxed max-w-3xl">
-            Developed a production-ready corporate website showcasing
-            Ribionic's ERP ecosystem, products, services, and company identity
-            through a responsive, component-driven frontend built with Next.js.
-          </p>
+<p className="text-[17px] text-neutral-600 leading-relaxed max-w-3xl">
+  Led the redevelopment of Ribionic's corporate website by migrating an
+  existing WordPress implementation to Next.js, creating a scalable
+  marketing platform featuring service pages, articles, contact
+  workflows, newsletter integration, and a modern user experience.
+</p>
         </section>
 
         {/* ================= IMPLEMENTATION ================= */}
@@ -89,23 +91,25 @@ export default function Intern3Page() {
               Implementation
             </h2>
 
-            <div className="space-y-4 text-[17px] text-neutral-600 leading-relaxed">
-              <p>
-                Developed reusable UI components and responsive layouts using
-                the Next.js App Router and Tailwind CSS.
-              </p>
+<div className="space-y-4 text-[17px] text-neutral-600 leading-relaxed">
+  <p>
+    Rebuilt the complete website using Next.js App Router with reusable
+    components, responsive layouts, and a modern design system for
+    consistent user experience.
+  </p>
 
-              <p>
-                Built interactive landing sections, responsive navigation,
-                smooth animations, and consistent design patterns across the
-                website.
-              </p>
+  <p>
+    Implemented dynamic articles, newsletter subscriptions, contact
+    forms with SMTP email delivery, SEO-friendly routing, metadata, and
+    optimized media handling across the site.
+  </p>
 
-              <p>
-                Optimized performance, SEO, and deployment through Next.js best
-                practices and Vercel hosting.
-              </p>
-            </div>
+  <p>
+    Managed the complete production deployment lifecycle including
+    Vercel hosting, custom domain configuration, DNS migration from
+    WordPress, and performance optimization.
+  </p>
+</div>
           </div>
 
           <div>
@@ -137,54 +141,55 @@ export default function Intern3Page() {
                 Development
               </h3>
 
-              <ul className="space-y-2 text-[17px] text-neutral-600">
-                <li>Responsive multi-page interface development</li>
-                <li>Reusable component-based architecture</li>
-                <li>Interactive animations & UI enhancements</li>
-                <li>Mobile-first responsive design</li>
-              </ul>
+<ul className="space-y-2 text-[17px] text-neutral-600">
+  <li>Complete WordPress to Next.js migration</li>
+  <li>Reusable component-based architecture</li>
+  <li>CMS-style articles and insights pages</li>
+  <li>Responsive multi-page interface development</li>
+  <li>Newsletter & contact form integration</li>
+  <li>SMTP email workflow implementation</li>
+</ul>
             </div>
 
             <div>
               <h3 className="text-[14px] uppercase tracking-[0.15em] text-neutral-400 mb-4">
                 Deployment
               </h3>
-
-              <ul className="space-y-2 text-[17px] text-neutral-600">
-                <li>SEO & metadata optimization</li>
-                <li>Image optimization with Next.js</li>
-                <li>Production deployment on Vercel</li>
-                <li>Custom domain & DNS configuration</li>
-              </ul>
+<ul className="space-y-2 text-[17px] text-neutral-600">
+  <li>SEO-friendly routing & metadata</li>
+  <li>Performance & image optimization</li>
+  <li>Production deployment on Vercel</li>
+  <li>Custom domain & DNS migration</li>
+  <li>Website launch & infrastructure setup</li>
+</ul>
             </div>
           </div>
         </section>
 
-        {/* ================= HIGHLIGHTS ================= */}
-        <section className="mt-24">
-          <h2 className="text-[26px] tracking-[-0.02em] font-medium mb-8">
-            Highlights
-          </h2>
+      {/* ================= HIGHLIGHTS ================= */}
+<section className="mt-24">
+  <h2 className="text-[26px] tracking-[-0.02em] font-medium mb-8">
+    Highlights
+  </h2>
 
-          <div className="grid sm:grid-cols-3 gap-10 max-w-5xl">
-            <Metric value="10+" label="Responsive Pages" />
-            <Metric value="15+" label="Reusable Components" />
-            <Metric value="Live" label="ribionic.com" />
-          </div>
-        </section>
-
+  <div className="grid sm:grid-cols-3 gap-10 max-w-5xl">
+    <Metric value="20+" label="Production Pages" />
+    <Metric value="30+" label="Reusable Components" />
+    <Metric value="Live" label="ribionic.com" />
+  </div>
+</section>
         {/* ================= REFLECTION ================= */}
         <section className="mt-24 max-w-4xl">
           <h2 className="text-[26px] tracking-[-0.02em] font-medium mb-5">
             Reflection
           </h2>
-
-          <p className="text-[18px] text-neutral-600 leading-relaxed">
-            This internship strengthened my frontend engineering skills through
-            the development of a production-ready Next.js application,
-            reinforcing best practices in responsive design, reusable
-            architecture, performance optimization, and modern web deployment.
-          </p>
+<p className="text-[18px] text-neutral-600 leading-relaxed">
+  This internship gave me end-to-end experience in delivering production
+  software—from modern frontend development and backend integrations to
+  deployment, DNS management, and performance optimization. It
+  reinforced the importance of building software that is scalable,
+  maintainable, and ready for real-world use.
+</p>
         </section>
       </div>
     </main>
