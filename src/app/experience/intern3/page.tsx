@@ -28,7 +28,7 @@ export default function Intern3Page() {
           </h1>
 
           <p className="mt-3 text-[17px] text-neutral-500 font-medium">
-            Software Engineer Intern (Frontend) | March – May 2026
+            Software Engineer Intern | March – May 2026
           </p>
 
           {/* Live Website */}

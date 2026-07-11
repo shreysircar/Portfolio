@@ -169,7 +169,7 @@ I’m Shrey — a Computer Science Engineering undergrad who designs and builds 
 
 <ProductCard
   title="Ribionic Solutions"
-  subtitle="SWE Intern (Frontend)"
+  subtitle="SWE Intern "
   year="2026"
   media={{
     type: "image", // or "video"
